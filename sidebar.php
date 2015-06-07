@@ -6,7 +6,7 @@
  */
 ?>
 
-<?php if ( !in_array( get_theme_mod( 'theme_layout', 'sidebar-right' ), array( 'single-column' ) ) ) : ?>
+<?php if ( !in_array( get_theme_mod( 'theme_layout', 'sidebar-right' ), array( 'single-column', 'narrow-column' ) ) ) : ?>
 
 	<div id="secondary-section" role="complementary">
 		<div id="secondary">

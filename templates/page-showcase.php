@@ -9,14 +9,15 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area clearfix">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
 		<?php
 
 		// Get pages set in the customizer (if any)
 		$pages = array();
 		for ( $count = 1; $count <= 5; $count++ ) {
-			$mod = get_theme_mod( 'showcase-page-' . $count );
+			$mod = get_theme_mod( 'page-showcase-' . $count );
 			if ( 'luminate-none-selected' != $mod ) {
 				$pages[] = $mod;
 			}
@@ -36,16 +37,9 @@ get_header(); ?>
 			while ( $query->have_posts() ) : $query->the_post();
 
 				// Set default image sizes to use
-				$thumbnail = 'luminate-showcase-crop';
-				$width = 880;
-				$height = 335;
-
-				// If it's the first page, use large image size
-				if ( 1 == $count ) {
-					$thumbnail = 'luminate-showcase-large';
-					$width = 780;
-					$height = 580;
-				}
+				$thumbnail = 'luminate-showcase';
+				$width = 840;
+				$height = 560;
 
 				// If no image is set, we'll use a fallback image
 				if ( has_post_thumbnail() ) {
@@ -62,38 +56,31 @@ get_header(); ?>
 				}
 				?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class( 'featured-' . $count ); ?>>
+				<article id="post-<?php the_ID(); ?>" <?php post_class( 'module featured-' . $count ); ?>>
 
 					<a href="<?php the_permalink(); ?>" class="entry-image-link">
 						<figure class="entry-image <?php echo $class; ?>">
-							<img src="<?php echo esc_url( $image ); ?>" height="<?php echo $height; ?>" width="<?php echo $width; ?>">
+							<img src="<?php echo esc_url( $image ); ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>">
 						</figure>
 					</a>
 
 					<header class="entry-header">
 						<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+						<?php if ( 'post' == get_post_type() ) : ?>
+							<div class="entry-meta entry-header-meta">
+								<?php luminate_posted_on(); ?>
+							</div><!-- .entry-meta -->
+						<?php endif; ?>
 					</header><!-- .entry-header -->
 
-					<?php if ( 1 == $count ) : ?>
-					<div class="entry-summary clearfix">
-						<?php
-						if ( has_excerpt() ) :
-							the_excerpt();
-						elseif ( @strpos( $post->post_content, '<!--more-->') ) :
-							the_content();
-						elseif ( str_word_count( $post->post_content ) < 100 ) :
-							the_content();
-						else:
-							the_excerpt();
-						endif;
-						?>
+					<div class="entry-content clearfix">
+						<?php the_excerpt(); ?>
 					</div><!-- .entry-content -->
-					<?php endif; ?>
 
-					<?php if ( 1 != $count ) : ?>
+					<?php if ( '' != get_theme_mod( 'top-navigation-text', '' ) ) : ?>
 					<p class="read-more">
 						<a href="<?php the_permalink(); ?>">
-							<?php _e( 'Read More', 'luminate' ); ?>
+							<?php echo luminate_sanitize_textarea( get_theme_mod( 'page-showcase-more-text', __( 'Read More', 'luminate' ) ) ); ?>
 						</a>
 					</p>
 					<?php endif; ?>
@@ -108,7 +95,7 @@ get_header(); ?>
 				<div class="admin-msg">
 					<p><?php _e( 'There are no pages available to display.', 'luminate' ); ?></p>
 					<p><?php printf(
-						__( 'These pages can be set in the <a href="%s">customizer</a>.', 'luminate' ),
+						__( 'Please check your settings in the <a href="%s">customizer</a>.', 'luminate' ),
 						admin_url( 'customize.php?autofocus[control]=showcase-tag' )
 					); ?></p>
 				</div>
@@ -118,6 +105,7 @@ get_header(); ?>
 
 		<?php wp_reset_query(); ?>
 
+		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>

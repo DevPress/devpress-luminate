@@ -24,17 +24,18 @@
 	<header id="masthead" class="site-header" role="banner">
 
 		<?php if ( has_nav_menu( 'top' ) ) : ?>
-		<nav id="primary-navigation" class="main-navigation clearfix" role="navigation">
-			<div class="col-width">
-				<div class="menu-toggle" data-toggle="#primary-navigation .menu">
-					<span class="screen-reader-text"><?php _e( 'Menu', 'luminate' ); ?></span>
-					<span class="toggle"></span>
+		<nav id="top-navigation" class="navigation-menu" role="navigation">
+			<div class="col-width clearfix">
+				<?php if ( '' != get_theme_mod( 'top-navigation-text', '' ) ) : ?>
+				<div class="top-navigation-text">
+					<?php echo luminate_sanitize_textarea( get_theme_mod( 'top-navigation-text', '' ) ); ?>
 				</div>
+				<?php endif; ?>
 				<?php wp_nav_menu( array(
-					'theme_location' => 'social',
+					'theme_location' => 'top',
 					'link_before' => '<span>',
 					'link_after' => '</span>',
-					'depth' => '2',
+					'depth' => '1',
 				) ); ?>
 			</div>
 		</nav>
@@ -75,7 +76,7 @@
 
 				<?php if ( has_nav_menu( 'primary' ) ) : ?>
 				<div id="primary-navigation-section">
-					<nav id="primary-navigation" class="main-navigation clearfix" role="navigation">
+					<nav id="primary-navigation" class="navigation-menu clearfix" role="navigation">
 						<div class="menu-toggle">
 							<a href="#offcanvas" class="navigation-button">
 								<span class="screen-reader-text"><?php _e( 'Menu', 'luminate' ); ?></span>

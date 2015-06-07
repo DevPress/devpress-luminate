@@ -12,6 +12,25 @@
  */
 function luminate_customize_controls( $wp_customize ) {
 
+	// Top Navigation Settings
+	$wp_customize->add_section( 'top-navigation' , array(
+		'title'      => __( 'Top Navigation', 'luminate' ),
+		'priority'   => 20,
+	) );
+
+	$wp_customize->add_setting( 'top-navigation-text', array(
+		'default'           => '',
+		'sanitize_callback' => 'luminate_sanitize_textarea'
+	) );
+
+	$wp_customize->add_control( 'top-navigation-text', array(
+		'label'    => __( 'Top Navigation Text', 'luminate' ),
+		'description'    => __( 'Text will display in top navigation bar.', 'luminate' ),
+		'section'  => 'top-navigation',
+		'type'     => 'textarea'
+	) );
+
+	// Header Settings
 	$wp_customize->add_setting( 'display_site_title',
 		array(
 			'default'    =>  1,
@@ -52,6 +71,43 @@ function luminate_customize_controls( $wp_customize ) {
 			'section'  => 'title_tagline',
 			'settings' => 'logo'
 		)
+	) );
+
+	// Template Settings
+	$wp_customize->add_section( 'page-showcase' , array(
+		'title'      => __( 'Page Showcase', 'luminate' ),
+		'priority'   => 30,
+	) );
+
+	for ( $count = 1; $count <= 5; $count++ ) :
+
+		// Add color scheme setting and control.
+		$wp_customize->add_setting( 'page-showcase-' . $count, array(
+			'default'           => '',
+			'sanitize_callback' => 'absint'
+		) );
+
+		$wp_customize->add_control( 'page-showcase-' . $count, array(
+			'label'    => __( 'Select Page', 'luminate' ),
+			'section'  => 'page-showcase',
+			'type'     => 'dropdown-pages'
+		) );
+
+	endfor;
+
+	$wp_customize->add_setting( 'page-showcase-more-text', array(
+		'default'           => __( 'Read More', 'luminate' ),
+		'sanitize_callback' => 'luminate_sanitize_textarea'
+	) );
+
+	$wp_customize->add_control( 'page-showcase-more-text', array(
+		'label'    => __( 'Read More Text', 'luminate' ),
+		'description'    => __( 'Change link text for pages in showcase. Leave blank to hide entirely.', 'luminate' ),
+		'section'  => 'page-showcase',
+		'type'     => 'text',
+		'input_attrs' => array(
+	        'placeholder'    => __( 'Read More', 'luminate' ),
+	    )
 	) );
 
 }
@@ -97,3 +153,16 @@ function luminate_customize_preview_js() {
 	);
 }
 add_action( 'customize_preview_init', 'luminate_customize_preview_js' );
+
+
+/**
+ * Sanitize textarea
+ */
+function luminate_sanitize_textarea( $content ) {
+
+	if ( '' === $content ){
+		return '';
+	}
+	return wp_kses( $content, wp_kses_allowed_html( 'post' ) );
+
+}

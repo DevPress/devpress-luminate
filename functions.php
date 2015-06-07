@@ -48,8 +48,9 @@ function luminate_setup() {
 
 	// Registers navigation menus
 	register_nav_menus( array(
-		'social' => __( 'Social Menu', 'luminate' ),
-		'primary' => __( 'Primary Menu', 'luminate' ),
+		'top'		=> __( 'Top Menu', 'luminate' ),
+		'primary'	=> __( 'Primary Menu', 'luminate' ),
+		'footer'	=> __( 'Footer Menu', 'luminate' ),
 	) );
 
 	/*
@@ -104,8 +105,7 @@ function luminate_register_image_sizes() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 720, 1200 );
 	add_image_size( 'luminate-archive', 560, 999 );
-	add_image_size( 'luminate-showcase-feature', 1050, 525, true );
-	add_image_size( 'luminate-showcase-crop', 880, 660, true );
+	add_image_size( 'luminate-showcase', 840, 560, true );
 
 }
 add_action( 'after_setup_theme', 'luminate_register_image_sizes' );

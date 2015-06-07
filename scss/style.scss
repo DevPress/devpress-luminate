@@ -84,8 +84,9 @@ a:active {
 @media screen and (min-width:480px) {
 	.col-width {
 		max-width:1140px;
-		margin:0 auto;
-		padding: 0 30px;
+		margin: 0 auto;
+		padding-right: 30px;
+		padding-left: 30px;
 	}
 	.module,
 	.posts-navigation {
@@ -112,6 +113,9 @@ a:active {
 }
 
 @media screen and (min-width: 480px ) {
+	.site-content {
+		padding-bottom: 30px;
+	}
 	.site-main {
 		padding: 30px 0;
 	}
@@ -179,16 +183,16 @@ a:active {
 .site-branding {
 	background-color: #fff;
 	color: #666;
-	padding: 25px 30px 30px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-@media screen and (min-width:480px) {
-	.site-branding {
-		padding: 25px 30px 30px 0;
-	}
 }
 .site-branding .col-width {
 	position: relative;
+	padding: 30px 30px 35px;
+}
+@media screen and (max-width:479px) {
+	.site-branding .col-width {
+		padding: 30px 6% 35px;
+	}
 }
 .site-brand {
 	float: left;
@@ -229,6 +233,9 @@ a:active {
 }
 
 @media screen and (min-width:1160px) {
+	.site-branding .col-width {
+		padding: 30px 30px 35px;
+	}
 	.brand {
 		max-width: 40%;
 		float: left;
@@ -237,6 +244,7 @@ a:active {
 		float: right;
 		max-width: 60%;
 		margin-top: 5px;
+		margin-right: -12px;
 	}
 }
 
@@ -255,7 +263,7 @@ a:active {
 }
 .entry-title {
 	font-size: 30px;
-	margin: 0;
+	line-height: 1.25;
 }
 .entry-title a:hover {
 	text-decoration: none;
@@ -327,7 +335,14 @@ a:active {
 .entry-content,
 .author-meta,
 .entry-footer-meta {
-	padding:0 6% 4%;
+	padding: 0 6% 6%;
+}
+@media screen and (min-width:510px) {
+	.entry-content,
+	.author-meta,
+	.entry-footer-meta {
+		padding: 0 6% 4%;
+	}
 }
 
 /* Author Meta*/
@@ -394,14 +409,6 @@ a:active {
 	margin-top:20px;
 }
 
-@media screen and (max-width:510px) {
-	.entry-content,
-	.author-meta,
-	.entry-footer-meta {
-		padding: 0 6% 6%;
-	}
-}
-
 /* Post Formats
 --------------------------------------------------------------*/
 
@@ -430,49 +437,7 @@ a:active {
 /* Page Templates
 --------------------------------------------------------------*/
 
-.template-showcase .hentry {
-	text-align: center;
-	font-size: 15px;
-}
-.template-showcase .entry-image {
-	margin: 0 0 15px;
-	padding: 0;
-}
-.template-showcase .fallback-thumbnail {
-	background: $primary-color;
-	padding: 25%;
-}
-.template-showcase .featured-1 {
-	border-bottom: none;
-}
-.template-showcase .featured-1 .fallback-thumbnail {
-	padding: 15%;
-}
-.template-showcase .entry-header {
-}
-
-@media screen and (min-width: 881px ) {
-	.template-showcase .hentry {
-		width: calc( 50% - 15px );
-		float:left;
-		margin: 0 30px 30px 0;
-		min-height: 365px;
-	}
-	.template-showcase .featured-1 {
-		width: 100%;
-		float: none;
-		margin: 0 0 30px;
-		font-size: 17px;
-	}
-	.template-showcase .featured-3,
-	.template-showcase .featured-5 {
-		margin-right: 0;
-	}
-}
-
-.admin-msg {
-	padding: 60px 30px;
-}
+@import "showcase";
 
 /* Search & 404
 --------------------------------------------------------------*/
@@ -716,11 +681,12 @@ a:active {
 	display:none; /* Using placeholders instead */
 }
 #author, #email, #url {
-	width: 50%;
+
+	width: 100%;
 }
 #respond textarea {
-  display: block;
-  width: 80%;
+	display: block;
+	width:100%;
 }
 #respond .placeholder {
 	color: #aaa;
@@ -742,15 +708,13 @@ a:active {
 	font-size:12px;
 }
 
-@media screen and (max-width:510px) {
-
+@media screen and (min-width:510px) {
 	#author, #email, #url {
-		width: 100%;
+		width: 50%;
 	}
 	#respond textarea {
-		width:100%;
+		width: 80%;
 	}
-
 }
 
 /* Footer
@@ -758,17 +722,20 @@ a:active {
 
 .footer-widgets {
 	padding: 30px 0;
-	background:#444;
-	color:#fff;
+	background: #444;
+	color: #aaa;
+	font-size: 15px;
 }
 .footer-widgets .widget-title {
-	color:#fff;
+	color:#ccc;
+	font-size: 18px;
 	padding-bottom:10px;
-	border-bottom: 3px solid #666;
+	margin-bottom: 30px;
+	border-bottom: 2px solid #666;
 }
 #colophon {
 	font-size: $secondary-font-size;
-	padding: 20px 0;
+	padding: 20px;
 	background: #353535;
 	color: #666
 }
@@ -819,6 +786,20 @@ a:active {
 	#colophon .col-width {
 		padding-right: 6%;
 		padding-left: 6%;
+	}
+}
+
+@media screen and ( min-width: 680px ) {
+	.site-info {
+		float: left;
+		max-width: 45%;
+	}
+	#footer-navigation {
+		float: right;
+		max-width: 45%;
+		text-align: right;
+		margin-left: auto;
+		margin-right: -12px;
 	}
 }
 
