@@ -77,10 +77,12 @@ get_header(); ?>
 						<?php the_excerpt(); ?>
 					</div><!-- .entry-content -->
 
-					<?php if ( '' != get_theme_mod( 'top-navigation-text', '' ) ) : ?>
+					<?php $moretext = luminate_sanitize_textarea( get_theme_mod( 'page-showcase-more-text-' . $count, __( 'Read More', 'luminate' ) ) ); ?>
+
+					<?php if ( '' != $moretext ) : ?>
 					<p class="read-more">
 						<a href="<?php the_permalink(); ?>">
-							<?php echo luminate_sanitize_textarea( get_theme_mod( 'page-showcase-more-text', __( 'Read More', 'luminate' ) ) ); ?>
+							<?php echo $moretext; ?>
 						</a>
 					</p>
 					<?php endif; ?>

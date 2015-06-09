@@ -90,6 +90,9 @@ function luminate_setup() {
 		array( 'default' => 'sidebar-right' )
 	);
 
+	// Excerpt support needed for page showcase template
+	add_post_type_support( 'page', 'excerpt' );
+
 }
 endif; // luminate_setup
 add_action( 'after_setup_theme', 'luminate_setup' );

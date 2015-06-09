@@ -81,7 +81,7 @@ function luminate_customize_controls( $wp_customize ) {
 
 	for ( $count = 1; $count <= 5; $count++ ) :
 
-		// Add color scheme setting and control.
+		// Add color scheme setting and control
 		$wp_customize->add_setting( 'page-showcase-' . $count, array(
 			'default'           => '',
 			'sanitize_callback' => 'absint'
@@ -93,22 +93,22 @@ function luminate_customize_controls( $wp_customize ) {
 			'type'     => 'dropdown-pages'
 		) );
 
+		// Read More Text
+		$wp_customize->add_setting( 'page-showcase-more-text-' . $count, array(
+			'default'           => __( 'Read More', 'luminate' ),
+			'sanitize_callback' => 'luminate_sanitize_textarea'
+		) );
+
+		$wp_customize->add_control( 'page-showcase-more-text-' . $count, array(
+			'description'    => __( 'Link text. Leave blank to hide.', 'luminate' ),
+			'section'  => 'page-showcase',
+			'type'     => 'text',
+			'input_attrs' => array(
+		        'placeholder'    => __( 'Read More', 'luminate' ),
+		    )
+		) );
+
 	endfor;
-
-	$wp_customize->add_setting( 'page-showcase-more-text', array(
-		'default'           => __( 'Read More', 'luminate' ),
-		'sanitize_callback' => 'luminate_sanitize_textarea'
-	) );
-
-	$wp_customize->add_control( 'page-showcase-more-text', array(
-		'label'    => __( 'Read More Text', 'luminate' ),
-		'description'    => __( 'Change link text for pages in showcase. Leave blank to hide entirely.', 'luminate' ),
-		'section'  => 'page-showcase',
-		'type'     => 'text',
-		'input_attrs' => array(
-	        'placeholder'    => __( 'Read More', 'luminate' ),
-	    )
-	) );
 
 }
 add_action( 'customize_register', 'luminate_customize_controls' );

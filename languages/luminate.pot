@@ -76,11 +76,11 @@ msgstr ""
 msgid "Sidebar Left"
 msgstr ""
 
-#: functions.php:123 inc/extras.php:81
+#: functions.php:126 inc/extras.php:81
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:133
+#: functions.php:136
 msgid "Footer"
 msgstr ""
 
@@ -124,19 +124,19 @@ msgstr ""
 msgid "Select Page"
 msgstr ""
 
-#: inc/customizer.php:99 inc/customizer.php:109 templates/page-showcase.php:83
-msgid "Read More"
-msgstr ""
-
-#: inc/customizer.php:104
+#: inc/customizer.php:98 inc/customizer.php:103
 msgid "Read More Text"
 msgstr ""
 
-#: inc/customizer.php:105
-msgid "Change link text for pages in showcase. Leave blank to hide entirely."
+#: inc/customizer.php:104
+msgid "Link text. Leave blank to hide."
 msgstr ""
 
-#: inc/customizer.php:123
+#: inc/customizer.php:108 templates/page-showcase.php:83
+msgid "Read More"
+msgstr ""
+
+#: inc/customizer.php:124
 msgid "Site Title, Tagline and Logo"
 msgstr ""
 
@@ -250,7 +250,7 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:160
+#: functions.php:163
 #. Translators: If there are characters in your language that are not
 #. * supported by Lora, translate this to 'off'. Do not translate
 #. * into your own language.
