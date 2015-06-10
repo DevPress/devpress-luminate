@@ -14,11 +14,16 @@
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
-	<?php if ( has_post_thumbnail() && get_theme_mod( 'post-featured-images', 1 ) ) { ?>
-	<figure class="entry-image">
-		<?php the_post_thumbnail(); ?>
-	</figure>
-	<?php } ?>
+	<?php if ( has_post_thumbnail() && get_theme_mod( 'post-featured-images', 1 ) ) :
+		$size = 'post-thumbnail';
+		if ( 'single-column' == get_theme_mod( 'theme_layout', 'sidebar-right' ) ) {
+			$size = 'luminate-single-column';
+		}
+		?>
+		<figure class="entry-image">
+			<?php the_post_thumbnail( $size ); ?>
+		</figure>
+	<?php endif; ?>
 
 	<div class="entry-content clearfix">
 		<?php the_content(); ?>

@@ -10,13 +10,6 @@
  */
 define( 'LUMINATE_VERSION', '1.0.0' );
 
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 664; /* pixels */
-}
-
 if ( ! function_exists( 'luminate_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -94,8 +87,44 @@ function luminate_setup() {
 	add_post_type_support( 'page', 'excerpt' );
 
 }
-endif; // luminate_setup
 add_action( 'after_setup_theme', 'luminate_setup' );
+endif; // luminate_setup
+
+if ( ! function_exists( 'luminate_content_width' ) ) :
+/**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function luminate_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'luminate_content_width', 720 );
+}
+add_action( 'after_setup_theme', 'luminate_content_width', 0 );
+endif;
+
+if ( ! function_exists( 'luminate_template_content_width' ) ) :
+/**
+ * Adjust content_width value for single column layouts
+ *
+ * @since Luminate 1.0.0
+ */
+function luminate_template_content_width() {
+
+	$layout = get_theme_mod( 'theme_layout', 'sidebar-right' );
+
+	if ( 'single-column' ==  $layout ) {
+		$GLOBALS['content_width'] = apply_filters( 'luminate_content_width_single_column', 950 );
+	}
+
+	if ( 'narrow-column' == $layout ) {
+		$GLOBALS['content_width'] = apply_filters( 'luminate_content_width_narrow_column', 695 );
+	}
+
+}
+add_action( 'template_redirect', 'luminate_template_content_width' );
+endif;
 
 if ( ! function_exists( 'luminate_register_image_sizes' ) ) :
 /*
@@ -107,8 +136,8 @@ function luminate_register_image_sizes() {
 
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 720, 1200 );
-	add_image_size( 'luminate-archive', 560, 999 );
 	add_image_size( 'luminate-showcase', 840, 560, true );
+	add_image_size( 'luminate-single-column', 950, 9999 );
 
 }
 add_action( 'after_setup_theme', 'luminate_register_image_sizes' );
