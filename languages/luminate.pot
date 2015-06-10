@@ -48,39 +48,39 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:51
+#: functions.php:44
 msgid "Top Menu"
 msgstr ""
 
-#: functions.php:52
+#: functions.php:45
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:53
+#: functions.php:46
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:85
+#: functions.php:78
 msgid "Single Column"
 msgstr ""
 
-#: functions.php:86
+#: functions.php:79
 msgid "Narrow Column"
 msgstr ""
 
-#: functions.php:87
+#: functions.php:80
 msgid "Sidebar Right"
 msgstr ""
 
-#: functions.php:88
+#: functions.php:81
 msgid "Sidebar Left"
 msgstr ""
 
-#: functions.php:126 inc/extras.php:81
+#: functions.php:155 inc/extras.php:81
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:136
+#: functions.php:165
 msgid "Footer"
 msgstr ""
 
@@ -186,12 +186,12 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: partials/content-page.php:18 partials/content-single.php:27
+#: partials/content-page.php:18 partials/content-single.php:32
 #: partials/content.php:34
 msgid "Pages:"
 msgstr ""
 
-#: partials/content-single.php:41
+#: partials/content-single.php:46
 msgid "About %s"
 msgstr ""
 
@@ -246,7 +246,7 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:163
+#: functions.php:192
 #. Translators: If there are characters in your language that are not
 #. * supported by Lora, translate this to 'off'. Do not translate
 #. * into your own language.

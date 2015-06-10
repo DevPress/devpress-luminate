@@ -57,10 +57,17 @@
 			});
 
 			// Off-canvas menu
+			var sources = [];
+			if ( document.getElementById( 'primary-navigation-section' ) ) {
+				sources[0] = '#primary-navigation-section';
+			}
+			if ( document.getElementById( 'secondary-section' ) ) {
+				sources[1] = '#secondary-section';
+			}
 			$( '.navigation-button' ).sidr({
 				name: 'offcanvas',
 				renaming: false,
-				source: '#primary-navigation-section, #secondary-section',
+				source: sources.join(","),
 				side : 'right'
 			});
 
