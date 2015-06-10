@@ -659,6 +659,9 @@ a:active {
 
 @media screen and (min-width: 1160px) {
   /* General Desktop Menu Styling */
+  #primary-navigation {
+    font-weight: 400;
+  }
   #primary-navigation ul {
     display: block;
   }

@@ -124,19 +124,15 @@ msgstr ""
 msgid "Select Page"
 msgstr ""
 
-#: inc/customizer.php:98 inc/customizer.php:103
-msgid "Read More Text"
-msgstr ""
-
-#: inc/customizer.php:104
-msgid "Link text. Leave blank to hide."
-msgstr ""
-
-#: inc/customizer.php:108 templates/page-showcase.php:83
+#: inc/customizer.php:98 inc/customizer.php:107 templates/page-showcase.php:80
 msgid "Read More"
 msgstr ""
 
-#: inc/customizer.php:124
+#: inc/customizer.php:103
+msgid "Link text. Leave blank to hide."
+msgstr ""
+
+#: inc/customizer.php:123
 msgid "Site Title, Tagline and Logo"
 msgstr ""
 
@@ -215,11 +211,11 @@ msgstr ""
 msgid "Search..."
 msgstr ""
 
-#: templates/page-showcase.php:96
+#: templates/page-showcase.php:98
 msgid "There are no pages available to display."
 msgstr ""
 
-#: templates/page-showcase.php:98
+#: templates/page-showcase.php:100
 msgid "Please check your settings in the <a href=\"%s\">customizer</a>."
 msgstr ""
 
