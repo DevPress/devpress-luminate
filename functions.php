@@ -250,6 +250,15 @@ function luminate_styles() {
 			'replace'
 		);
 
+		if ( is_page_template( 'templates/page-showcase.php' ) ) :
+			wp_enqueue_style(
+				'luminate-page-showcase',
+				get_template_directory_uri() . '/css/page-showcase.css',
+				array(),
+				LUMINATE_VERSION
+			);
+		endif;
+
 	else :
 
 		wp_enqueue_style(
@@ -265,6 +274,15 @@ function luminate_styles() {
 			'rtl',
 			'replace'
 		);
+
+		if ( is_page_template( 'templates/page-showcase.php' ) ) :
+			wp_enqueue_style(
+				'luminate-page-showcase',
+				get_template_directory_uri() . '/css/page-showcase.min.css',
+				array(),
+				LUMINATE_VERSION
+			);
+		endif;
 
 	endif;
 

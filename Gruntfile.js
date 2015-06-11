@@ -20,16 +20,20 @@ module.exports = function(grunt) {
 			  	},
 			  	files: {
 					'css/style.css':'scss/style.scss',
+					'css/page-showcase.css':'scss/page-showcase.scss'
 				}
 			}
 		},
-	    autoprefixer: {
-            options: {
-				browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1', 'ie 9']
+	    postcss: {
+			options: {
+			map: true,
+			processors: [
+				require('autoprefixer-core')({browsers: 'last 2 versions'}),
+			]
 			},
-			single_file: {
-				src: 'css/style.css',
-				dest: 'css/style.css'
+			files: {
+				'css/style.css':'css/style.css',
+				'css/page-showcase.css':'css/page-showcase.css'
 			}
 		},
 		cssmin: {
@@ -101,8 +105,8 @@ module.exports = function(grunt) {
 				],
 				overwrite: true,
 				replacements: [ {
-					from: /^define\( 'CLASSIC_VERSION'.*$/m,
-					to: 'define( \'CLASSIC_VERSION\', \'<%= pkg.version %>\' );'
+					from: /^define\( 'LUMINATE_VERSION'.*$/m,
+					to: 'define( \'LUMINATE_VERSION\', \'<%= pkg.version %>\' );'
 				} ]
 			},
 		},
@@ -127,13 +131,13 @@ module.exports = function(grunt) {
 
 	grunt.registerTask( 'default', [
 		'sass',
-		'autoprefixer',
+		'postcss',
     ]);
 
     grunt.registerTask( 'release', [
     	'replace',
     	'sass',
-    	'autoprefixer',
+    	'postcss',
     	'cssmin',
     	'concat:build',
 		'uglify:build',

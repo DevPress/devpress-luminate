@@ -1,3 +1,10 @@
+/*
+Template: page-showcase.php
+Description: This file is only enqueued for page-showcase.php
+*/
+
+@import "variables";
+
 .page-template-page-showcase {
 	.hentry {
 		padding-top: 6%;
@@ -10,13 +17,16 @@
 		padding: 0 6% 2%;
 		width: 100%;
 	}
+	.entry-image-link:hover img {
+		opacity: .8;
+	}
+	.fallback-thumbnail {
+		background: $highlight-color;
+	}
 	.read-more {
 		padding: 0 6% 6%;
 		text-transform: uppercase;
 		font-size: 14px;
-	}
-	.fallback-thumbnail {
-		background: $highlight-color;
 	}
 }
 
