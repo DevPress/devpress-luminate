@@ -110,6 +110,30 @@ function luminate_customize_controls( $wp_customize ) {
 
 	endfor;
 
+	// Highlight Color Settings
+	$wp_customize->add_setting( 'highlight-color', array(
+		'default' => '#67acc0',
+		'sanitize_callback' => 'sanitize_hex_color'
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'highlight-color', array(
+		'label' => __( 'Highlight Color', 'luminate' ),
+		'section' => 'colors',
+		'settings' => 'highlight-color'
+	) ) );
+
+	// Highlight Hover Settings
+	$wp_customize->add_setting( 'highlight-hover', array(
+		'default' => '#4796AD',
+		'sanitize_callback' => 'sanitize_hex_color'
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'highlight-hover', array(
+		'label' => __( 'Highlight Hover', 'luminate' ),
+		'section' => 'colors',
+		'settings' => 'highlight-hover'
+	) ) );
+
 }
 add_action( 'customize_register', 'luminate_customize_controls' );
 
@@ -136,6 +160,7 @@ function luminate_customize_transports( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'display_site_title' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'display_site_description' )->transport  = 'postMessage';
+	$wp_customize->get_setting( 'highlight-color' )->transport = 'postMessage';
 
 }
 add_action( 'customize_register', 'luminate_customize_transports' );
@@ -156,13 +181,40 @@ add_action( 'customize_preview_init', 'luminate_customize_preview_js' );
 
 
 /**
- * Sanitize textarea
+ * Sanitize textarea.
+ *
+ * @param string $content
+ * @return string
  */
 function luminate_sanitize_textarea( $content ) {
 
-	if ( '' === $content ){
+	if ( '' === $content ) {
 		return '';
 	}
 	return wp_kses( $content, wp_kses_allowed_html( 'post' ) );
 
 }
+
+if ( ! function_exists( 'sanitize_hex_color' ) ) :
+/**
+ * Sanitizes a hex color.
+ *
+ * Returns either '', a 3 or 6 digit hex color (with #), or null.
+ * For sanitizing values without a #, see sanitize_hex_color_no_hash().
+ *
+ * @since 3.4.0
+ *
+ * @param string $color
+ * @return string|null
+ */
+function sanitize_hex_color( $color ) {
+	if ( '' === $color )
+		return '';
+
+	// 3 or 6 hex digits, or the empty string.
+	if ( preg_match('|^#([A-Fa-f0-9]{3}){1,2}$|', $color ) )
+		return $color;
+
+	return null;
+}
+endif;

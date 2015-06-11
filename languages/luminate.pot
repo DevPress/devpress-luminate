@@ -132,7 +132,11 @@ msgstr ""
 msgid "Link text. Leave blank to hide."
 msgstr ""
 
-#: inc/customizer.php:123
+#: inc/customizer.php:121
+msgid "Highlight Color"
+msgstr ""
+
+#: inc/customizer.php:135
 msgid "Site Title, Tagline and Logo"
 msgstr ""
 

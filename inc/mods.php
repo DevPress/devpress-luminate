@@ -5,6 +5,44 @@
  * @package Luminate
  */
 
+if ( ! function_exists( 'luminate_inline_styles' ) ) :
+/**
+ * Output inline styles in the header if options are set
+ */
+function luminate_inline_styles() {
+
+	// Variable for inline styles
+	$output = '';
+
+	// Highlight Color
+	$default = '#67acc0';
+	$mod = get_theme_mod( 'highlight-color',  $default );
+
+	if ( $default != $mod ) {
+		$output .= "a { color:" . sanitize_hex_color( $mod ) . " }\n";
+		$output .= ".page-header, #content blockquote { border-left-color:" . sanitize_hex_color( $mod ) . " }\n";
+		$output .= "button, .button, input[type='button'], input[type='reset'], input[type='submit'] { background:" . sanitize_hex_color( $mod ) . " }\n";
+	}
+
+	// Highlight Hover
+	$default = '#4796AD';
+	$mod = get_theme_mod( 'highlight-hover',  $default );
+
+	if ( $default != $mod) {
+		$output .= "a:hover { color:" . sanitize_hex_color( $mod ) . " }\n";
+		$output .= "button:hover, .button:hover, input[type='button']:hover, input[type='reset']:hover, input[type='submit']:hover { background:" . sanitize_hex_color( $mod ) . " }\n";
+	}
+
+	// Output styles
+	if ( '' != $output ) {
+		$output = "<!-- Luminate Styles -->\n<style type=\"text/css\">\n" . $output . "</style>\n";
+		echo $output;
+	}
+}
+add_action( 'wp_head', 'luminate_inline_styles', 100 );
+endif;
+
+if ( ! function_exists( 'luminate_footer_text' ) ) :
 /**
  * Get default footer text
  *
@@ -23,6 +61,7 @@ function luminate_footer_text() {
 	);
 	return $text;
 }
+endif;
 
 /**
  * Append class "social" to specific off-site links
@@ -41,7 +80,6 @@ function luminate_social_nav_class( $classes, $item ) {
 
     	$base = str_replace( "www.", "", $url['host'] );
 
-    	// @TODO Make this filterable
     	$social = array(
     		'behance.com',
     		'dribbble.com',
@@ -58,6 +96,7 @@ function luminate_social_nav_class( $classes, $item ) {
     		'twitter.com',
     		'vimeo.com'
     	);
+    	$social = apply_filters( 'luminate_social_links', $social );
 
     	// Tumblr needs special attention
     	if ( strpos( $base, 'tumblr' ) ) {

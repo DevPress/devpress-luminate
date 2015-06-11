@@ -302,7 +302,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  background: #55a2b9;
+  background: #4796ad;
 }
 
 button:focus,
@@ -438,6 +438,10 @@ a {
   text-decoration: none;
   transition: all 0.2s ease;
   word-wrap: break-word;
+}
+
+a:hover {
+  color: #4796ad;
 }
 
 a:hover,
@@ -982,9 +986,12 @@ a:active {
   line-height: 1.25;
 }
 
+.page .entry-title {
+  margin: 0;
+}
+
 .entry-title a:hover {
   text-decoration: none;
-  color: #afd3de;
 }
 
 .page-header {
@@ -1867,7 +1874,7 @@ object {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   overflow: hidden;
-  color: #67acc0;
+  color: #333;
   font-size: 16px;
   padding: 15px 60px;
   display: block;
