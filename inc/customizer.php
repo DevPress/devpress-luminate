@@ -164,7 +164,7 @@ function luminate_customize_preview_js() {
 		'luminate_customizer',
 		get_template_directory_uri() . '/js/customizer.js',
 		array( 'customize-preview' ),
-		'1.0.2',
+		'1.0.0',
 		true
 	);
 }
