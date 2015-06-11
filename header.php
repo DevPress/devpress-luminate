@@ -23,7 +23,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
+		<?php if ( has_nav_menu( 'top' ) || '' != get_theme_mod( 'top-navigation-text', '' ) ) : ?>
 		<nav id="top-navigation" class="navigation-menu" role="navigation">
 			<div class="col-width clearfix">
 				<?php if ( '' != get_theme_mod( 'top-navigation-text', '' ) ) : ?>
@@ -31,12 +31,14 @@
 					<?php echo luminate_sanitize_textarea( get_theme_mod( 'top-navigation-text', '' ) ); ?>
 				</div>
 				<?php endif; ?>
-				<?php wp_nav_menu( array(
-					'theme_location' => 'top',
-					'link_before' => '<span>',
-					'link_after' => '</span>',
-					'depth' => '1',
-				) ); ?>
+				<?php if ( has_nav_menu( 'top' ) ) :
+					wp_nav_menu( array(
+						'theme_location' => 'top',
+						'link_before' => '<span>',
+						'link_after' => '</span>',
+						'depth' => '1',
+					) );
+				endif; ?>
 			</div>
 		</nav>
 		<?php endif; ?>
@@ -57,7 +59,7 @@
 					<?php if ( luminate_brand_text() ) : ?>
 					<div class="brand-text">
 
-						<?php if ( get_theme_mod( 'display_site_title', 1 ) ) : ?>
+						<?php if ( get_theme_mod( 'display-site-title', 1 ) ) : ?>
 							<div class="site-title">
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 									<?php echo get_bloginfo( 'name' ); ?>
@@ -65,7 +67,7 @@
 							</div>
 						<?php endif; ?>
 
-						<?php if ( get_theme_mod( 'display_site_description', 0 ) && get_bloginfo( 'description' ) != '' ) : ?>
+						<?php if ( get_theme_mod( 'display-site-description', 0 ) && get_bloginfo( 'description' ) != '' ) : ?>
 							<div class="site-description"><?php bloginfo( 'description' ); ?></div>
 						<?php endif; ?>
 

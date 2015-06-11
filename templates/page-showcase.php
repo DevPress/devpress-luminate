@@ -98,7 +98,7 @@ get_header(); ?>
 					<p><?php _e( 'There are no pages available to display.', 'luminate' ); ?></p>
 					<p><?php printf(
 						__( 'Please check your settings in the <a href="%s">customizer</a>.', 'luminate' ),
-						admin_url( 'customize.php?autofocus[control]=showcase-tag' )
+						admin_url( 'customize.php?autofocus[control]=page-showcase-1' )
 					); ?></p>
 				</div>
 			<?php }

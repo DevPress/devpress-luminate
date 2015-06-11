@@ -31,35 +31,27 @@ function luminate_customize_controls( $wp_customize ) {
 	) );
 
 	// Header Settings
-	$wp_customize->add_setting( 'display_site_title',
-		array(
-			'default'    =>  1,
-			'transport'  =>  'postMessage'
-		)
-	);
+	$wp_customize->add_setting( 'display-site-title', array(
+		'default'    =>  1,
+		'transport'  =>  'refresh'
+	) );
 
-	$wp_customize->add_control( 'display_site_title',
-		array(
-			'label'     => __( 'Display Site Title', 'luminate' ),
-			'section'   => 'title_tagline',
-			'type'      => 'checkbox'
-		)
-	);
+	$wp_customize->add_control( 'display-site-title', array(
+		'label'     => __( 'Display Site Title', 'luminate' ),
+		'section'   => 'title_tagline',
+		'type'      => 'checkbox'
+	) );
 
-	$wp_customize->add_setting( 'display_site_description',
-		array(
-			'default'    =>  0,
-			'transport'  =>  'postMessage'
-		)
-	);
+	$wp_customize->add_setting( 'display-site-description', array(
+		'default'    =>  0,
+		'transport'  =>  'refresh'
+	) );
 
-	$wp_customize->add_control( 'display_site_description',
-		array(
-			'label'     => __( 'Display Site Description', 'luminate' ),
-			'section'   => 'title_tagline',
-			'type'      => 'checkbox'
-		)
-	);
+	$wp_customize->add_control( 'display-site-description', array(
+		'label'     => __( 'Display Site Description', 'luminate' ),
+		'section'   => 'title_tagline',
+		'type'      => 'checkbox'
+	) );
 
 	$wp_customize->add_setting( 'logo', array(
 		'sanitize_callback' => 'esc_url_raw',
@@ -100,7 +92,7 @@ function luminate_customize_controls( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( 'page-showcase-more-text-' . $count, array(
-			'description'    => __( 'Link text. Leave blank to hide.', 'luminate' ),
+			'description'    => __( 'Link text. Set blank to hide.', 'luminate' ),
 			'section'  => 'page-showcase',
 			'type'     => 'text',
 			'input_attrs' => array(
@@ -156,11 +148,10 @@ add_action( 'customize_register', 'luminate_customize_headers' );
  */
 function luminate_customize_transports( $wp_customize ) {
 
-	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
+	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'display_site_title' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'display_site_description' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'highlight-color' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'highlight-hover' )->transport = 'postMessage';
 
 }
 add_action( 'customize_register', 'luminate_customize_transports' );
@@ -173,12 +164,11 @@ function luminate_customize_preview_js() {
 		'luminate_customizer',
 		get_template_directory_uri() . '/js/customizer.js',
 		array( 'customize-preview' ),
-		LUMINATE_VERSION,
+		'1.0.2',
 		true
 	);
 }
 add_action( 'customize_preview_init', 'luminate_customize_preview_js' );
-
 
 /**
  * Sanitize textarea.
@@ -202,18 +192,18 @@ if ( ! function_exists( 'sanitize_hex_color' ) ) :
  * Returns either '', a 3 or 6 digit hex color (with #), or null.
  * For sanitizing values without a #, see sanitize_hex_color_no_hash().
  *
- * @since 3.4.0
- *
  * @param string $color
  * @return string|null
  */
 function sanitize_hex_color( $color ) {
-	if ( '' === $color )
+	if ( '' === $color ) {
 		return '';
+	}
 
 	// 3 or 6 hex digits, or the empty string.
-	if ( preg_match('|^#([A-Fa-f0-9]{3}){1,2}$|', $color ) )
+	if ( preg_match('|^#([A-Fa-f0-9]{3}){1,2}$|', $color ) ) {
 		return $color;
+	}
 
 	return null;
 }
