@@ -236,7 +236,9 @@ msgid "https://devpress.com/luminate"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Theme description."
+msgid ""
+"Luminate allows you to quickly set up a website for your small business or "
+"organization."
 msgstr ""
 
 #. Author of the plugin/theme

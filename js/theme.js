@@ -3,7 +3,7 @@
  *
  * @since 1.0.0
  */
- (function($) {
+(function($) {
 
  	var luminate = {
 

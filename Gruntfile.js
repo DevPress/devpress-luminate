@@ -37,6 +37,9 @@ module.exports = function(grunt) {
 			}
 		},
 		cssmin: {
+			options: {
+				aggressiveMerging : false
+			},
 		    target: {
 		        files: [{
 		            expand: true,
@@ -44,17 +47,15 @@ module.exports = function(grunt) {
 					src: ['*.css', '!*.min.css'],
 					dest: 'css',
 					ext: '.min.css'
-		        }],
-		        options: {
-		        }
+		        }]
 		    }
 		},
 		concat: {
-		    build: {
+		    release: {
 		        src: [
 		            'js/skip-link-focus-fix.js',
 		            'js/jquery.fastclick.js',
-		            'js/jquery.navigation.js',
+		            'js/navigation.js',
 		            'js/jquery.fitvids.js',
 		            'js/theme.js'
 		        ],
@@ -62,7 +63,13 @@ module.exports = function(grunt) {
 		    }
 		},
 		uglify: {
-		    build: {
+			options: {
+				mangle: {
+					except: ['jQuery', 'sidr']
+      			},
+				drop_console: true
+			},
+		    release: {
 		        src: 'js/luminate.min.js',
 		        dest: 'js/luminate.min.js'
 		    }
@@ -139,8 +146,8 @@ module.exports = function(grunt) {
     	'sass',
     	'postcss',
     	'cssmin',
-    	'concat:build',
-		'uglify:build',
+    	'concat:release',
+		'uglify:release',
 		'makepot',
 		'cssjanus'
 	]);

@@ -5,7 +5,6 @@
  * Copyright (c) 2013 Alberto Varela
  * Licensed under the MIT license.
  */
-;
 (function($) {
 	var sidrMoving = false,
 		sidrOpened = false;
