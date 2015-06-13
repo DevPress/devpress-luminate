@@ -158,12 +158,14 @@
 		background-color: rgba(0, 0, 0, 0);
 	}
 	.toggle:before {
+		-webkit-transform: rotate(45deg);
 		transform: rotate(45deg);
 		top: 0;
 	}
 	.toggle:after {
-		  transform: translateY(-10px) rotate(-45deg);
-		  top: 10px;
+		-webkit-transform: translateY(-10px) rotate(-45deg);
+		transform: translateY(-10px) rotate(-45deg);
+		top: 10px;
 	}
 }
 

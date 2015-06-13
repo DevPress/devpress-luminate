@@ -1,6 +1,10 @@
 # Luminate
 
-Theme description.
+Luminate was designed with small businesses and organizations in mind. It's highly adaptable, looks great on mobile devices, and is optimized for speed.
+
+## Screenshot
+
+![Luminate Screenshot](https://github.com/DevPress/devpress-luminate/blob/master/screenshot.jpg)
 
 ## Installation Instructions
 

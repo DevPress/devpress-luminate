@@ -109,11 +109,18 @@ a:hover {
 }
 .content-area {
 	width: 100%;
+	background: #fff;
+	padding-top: 15px;
 }
 
 @media screen and (min-width: 480px ) {
 	.site-content {
 		padding-bottom: 30px;
+		background: none;
+	}
+	.content-area {
+		background: none;
+		padding-top: 0;
 	}
 	.site-main {
 		padding: 30px 0;
@@ -731,7 +738,8 @@ a:hover {
 }
 #colophon {
 	font-size: $secondary-font-size;
-	padding: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	background: #353535;
 	color: #666
 }
