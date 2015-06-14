@@ -23,8 +23,14 @@ get_header(); ?>
 			}
 		}
 
+		// Display 4 items for single column layout, 5 for sidebar layout
+		$posts_to_show = 5;
+		if ( in_array( get_theme_mod( 'theme_layout', 'sidebar-right' ), array( 'single-column', 'narrow-column' ) ) ) {
+			$posts_to_show = 4;
+		}
+
 		$args = array(
-			'posts_per_page' => 5,
+			'posts_per_page' => $posts_per_page,
 			'post_type' => 'page',
 			'post__in' => $pages,
 			'orderby' => 'post__in'
