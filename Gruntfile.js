@@ -56,7 +56,6 @@ module.exports = function(grunt) {
 		            'js/skip-link-focus-fix.js',
 		            'js/jquery.fastclick.js',
 		            'js/navigation.js',
-		            'js/jquery.fitvids.js',
 		            'js/theme.js'
 		        ],
 		        dest: 'js/luminate.min.js',
@@ -70,8 +69,10 @@ module.exports = function(grunt) {
 				drop_console: true
 			},
 		    release: {
-		        src: 'js/luminate.min.js',
-		        dest: 'js/luminate.min.js'
+			    files: {
+				    'js/luminate.min.js' : 'js/luminate.min.js',
+				    'js/jquery.fitvids.min.js' : 'js/jquery.fitvids.js'
+				}
 		    }
 		},
 	    // https://www.npmjs.org/package/grunt-wp-i18n

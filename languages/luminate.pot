@@ -124,7 +124,7 @@ msgstr ""
 msgid "Select Page"
 msgstr ""
 
-#: inc/customizer.php:90 inc/customizer.php:99 templates/page-showcase.php:80
+#: inc/customizer.php:90 inc/customizer.php:99 templates/page-showcase.php:86
 msgid "Read More"
 msgstr ""
 
@@ -219,11 +219,11 @@ msgstr ""
 msgid "Search..."
 msgstr ""
 
-#: templates/page-showcase.php:98
+#: templates/page-showcase.php:104
 msgid "There are no pages available to display."
 msgstr ""
 
-#: templates/page-showcase.php:100
+#: templates/page-showcase.php:106
 msgid "Please check your settings in the <a href=\"%s\">customizer</a>."
 msgstr ""
 

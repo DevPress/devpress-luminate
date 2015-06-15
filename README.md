@@ -23,6 +23,11 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 
 ## Change Log
 
+Development
+---
+
+* Enhancement: Only enqueue FitVids when embeds are present
+
 1.0.0
 ---
 

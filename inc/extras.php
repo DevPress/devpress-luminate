@@ -88,3 +88,29 @@ function luminate_sidebar_args() {
 	);
 	return $args;
 }
+
+/**
+ * Enqueues FitVids, since the embed might be a video.
+ *
+ * @since 1.0.0.
+ *
+ * @param  string    $html    The generated HTML of the embed handler.
+ * @param  string    $url     The embed URL.
+ * @param  array     $attr    The attributes of the embed shortcode.
+ *
+ * @return string             Returned HTML.
+ */
+function luminate_embed_container( $html, $url, $attr ) {
+	// Bail if this is the admin
+	if ( is_admin() ) {
+		return $html;
+	}
+
+	if ( isset( $attr['width'] ) ) {
+		wp_enqueue_script( 'luminate-fitvids' );
+	}
+
+	return $html;
+}
+add_filter( 'embed_handler_html', 'luminate_embed_container', 10, 3 );
+add_filter( 'embed_oembed_html' , 'luminate_embed_container', 10, 3 );
