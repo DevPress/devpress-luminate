@@ -29,6 +29,7 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 * Enhancement: Enqueue FitVids when embeds are present
 * Enhancement: Improved menu response
 * Fix: Display field labels in comment form
+* Fix: Display highlight cover color in customizer
 
 1.0.0
 ---

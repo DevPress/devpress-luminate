@@ -8,7 +8,7 @@
 /**
  * The current version of the theme.
  */
-define( 'LUMINATE_VERSION', '1.0.0' );
+define( 'LUMINATE_VERSION', '1.0.1' );
 
 if ( ! function_exists( 'luminate_setup' ) ) :
 /**
