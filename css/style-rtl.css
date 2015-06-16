@@ -1449,8 +1449,7 @@ a:hover {
 }
 
 #respond label {
-  display: none;
-  /* Using placeholders instead */
+  margin-bottom: 2px;
 }
 
 #author, #email, #url {
@@ -1517,7 +1516,7 @@ a:hover {
   padding-top: 20px;
   padding-bottom: 20px;
   background: #353535;
-  color: #666666;
+  color: #aaa;
 }
 
 #colophon a {

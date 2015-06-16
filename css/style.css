@@ -1449,8 +1449,7 @@ a:hover {
 }
 
 #respond label {
-  display: none;
-  /* Using placeholders instead */
+  margin-bottom: 2px;
 }
 
 #author, #email, #url {
