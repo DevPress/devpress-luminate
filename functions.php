@@ -324,8 +324,8 @@ function luminate_scripts() {
 		);
 
 		wp_enqueue_script(
-			'luminate-navigation',
-			get_template_directory_uri() . '/js/navigation.js',
+			'luminate-sidr',
+			get_template_directory_uri() . '/js/sidr.js',
 			array(),
 			LUMINATE_VERSION,
 			true

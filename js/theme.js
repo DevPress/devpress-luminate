@@ -10,7 +10,8 @@
  		// Cache selectors
 	 	cache: {
 			$document: $(document),
-			$window: $(window)
+			$window: $(window),
+			$page: $('#page')
 		},
 
 		// Init functions
@@ -32,6 +33,11 @@
 				self.fitVidsInit();
 
 			} );
+
+			this.cache.$window.on( 'resize', self.debounce( function() {
+					$.sidr( 'close', 'offcanvas' );
+				}
+			) );
 
 		},
 
@@ -68,7 +74,16 @@
 				name: 'offcanvas',
 				renaming: false,
 				source: sources.join(","),
-				side : 'right'
+				side : 'right',
+				onOpen : function() {
+					$('body').addClass( 'offcanvas-open-js' );
+					$('.offcanvas-open-js #page').on( 'click', function(){
+						$.sidr( 'close', 'offcanvas' );
+					});
+				},
+				onClose : function() {
+					$('body').removeClass( 'offcanvas-open-js' );
+				}
 			});
 
 		},

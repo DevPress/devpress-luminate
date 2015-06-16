@@ -476,6 +476,14 @@ a:hover {
   display: block;
 }
 
+#content {
+  transition: opacity 0.2s ease;
+}
+
+.offcanvas-open #content {
+  opacity: .4;
+}
+
 .content-area {
   width: 100%;
   background: #fff;
@@ -696,7 +704,7 @@ a:hover {
     width: 220px;
     position: absolute;
     left: 50%;
-    top: 49px;
+    top: 46px;
     z-index: 99999;
     margin-left: -110px;
     border-radius: 2px;
@@ -746,7 +754,7 @@ a:hover {
 #primary-navigation .menu-toggle .toggle,
 #primary-navigation .menu-toggle .toggle:before,
 #primary-navigation .menu-toggle .toggle:after {
-  transition: all 400ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 #primary-navigation .menu-toggle .toggle,
 #primary-navigation .menu-toggle .toggle:before,
@@ -1001,6 +1009,11 @@ a:hover {
   font-size: 22px;
   color: #333;
   margin: 0;
+}
+
+.taxonomy-description {
+  margin-top: 1em;
+  font-size: 16px;
 }
 
 .entry-meta {

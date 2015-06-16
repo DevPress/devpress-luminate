@@ -67,7 +67,7 @@
 			width:220px;
 			position: absolute;
 			left: 50%;
-			top:49px;
+			top:46px;
 			z-index: 99999;
 			margin-left: -110px;
 			border-radius: 2px;
@@ -123,7 +123,7 @@
 		.toggle,
 		.toggle:before,
 		.toggle:after {
-			transition: all 400ms ease-in-out;
+			transition: all 100ms ease-in-out;
 		}
 		.toggle,
 		.toggle:before,

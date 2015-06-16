@@ -23,10 +23,12 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 
 ## Change Log
 
-Development
+1.0.1
 ---
 
-* Enhancement: Only enqueue FitVids when embeds are present
+* Enhancement: Enqueue FitVids when embeds are present
+* Enhancement: Improved menu response
+* Fix: Display field labels in comment form
 
 1.0.0
 ---
