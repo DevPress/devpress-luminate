@@ -21,18 +21,29 @@
 
 	wp.customize( 'highlight-color', function( value ) {
 
+		// Create an inline style in the head
+		if ( null == document.getElementById( 'luminate-highlight-color' ) ) {
+			$('<style id="luminate-highlight-color"></style>').appendTo( "head" );
+		}
+
+		// Write contents of inline style
 		value.bind( function( to ) {
-			$('.site-content a, .footer-widgets a').css( 'color', to );
-			$('.page-header, #content blockquote').css( 'border-left-color', to );
-			$("button, .button, input[type='button'], input[type='reset'], input[type='submit']").css( 'background', to );
+			$('#luminate-highlight-color').text(" .site-content a, .footer-widgets a { color : " + to + "; } .page-header, #content blockquote { border-left-color : " + to + "; } button, .button, input[type='button'], input[type='reset'], input[type='submit'] { background : " + to + "; }");
 		} );
 	} );
 
 	wp.customize( 'highlight-hover', function( value ) {
+
+		// Create an inline style in the head
+		if ( null == document.getElementById( 'luminate-highlight-hover' ) ) {
+			$('<style id="luminate-highlight-hover"></style>').appendTo( "head" );
+		}
+
+		// Write contents of inline style
 		value.bind( function( to ) {
-			$('.site-content a:hover, .footer-widgets a:hover').css( 'color', to );
-			$("button:hover, .button:hover, input[type='button']:hover, input[type='reset']:hover, input[type='submit']:hover").css( 'background', to );
+			$('#luminate-highlight-hover').text(" .site-content a:hover, .footer-widgets a:hover { color : " + to + "; }button:hover, .button, input[type='button']:hvoer, input[type='reset']:hover, input[type='submit']:hover { background : " + to + "; }");
 		} );
+
 	} );
 
 } )( jQuery );
