@@ -830,7 +830,7 @@ a:hover {
 #top-navigation,
 #footer-navigation {
   background: #353535;
-  color: #aaa;
+  color: #ddd;
   font-size: 14px;
 }
 #top-navigation ul,
@@ -846,7 +846,7 @@ a:hover {
 #top-navigation a,
 #footer-navigation a {
   display: inline-block;
-  color: #aaa;
+  color: #ddd;
   padding: 12px;
   text-decoration: none;
 }
@@ -1500,12 +1500,12 @@ a:hover {
 .footer-widgets {
   padding: 30px 0;
   background: #444;
-  color: #aaa;
+  color: #ddd;
   font-size: 15px;
 }
 
 .footer-widgets .widget-title {
-  color: #ccc;
+  color: #eee;
   font-size: 18px;
   padding-bottom: 10px;
   margin-bottom: 30px;
@@ -1521,7 +1521,7 @@ a:hover {
 }
 
 #colophon a {
-  color: #999999;
+  color: #ddd;
 }
 
 @media screen and (min-width: 510px) and (max-width: 880px) {
