@@ -71,7 +71,7 @@ function luminate_customize_controls( $wp_customize ) {
 		'priority'   => 30,
 	) );
 
-	for ( $count = 1; $count <= 5; $count++ ) :
+	for ( $count = 1; $count <= 7; $count++ ) :
 
 		// Add color scheme setting and control
 		$wp_customize->add_setting( 'page-showcase-' . $count, array(

@@ -74,10 +74,13 @@ Description: This file is only enqueued for page-showcase.php
   }
   .layout-sidebar-right.page-template-page-showcase .featured-2,
   .layout-sidebar-right.page-template-page-showcase .featured-4,
+  .layout-sidebar-right.page-template-page-showcase .featured-6,
   .layout-sidebar-left.page-template-page-showcase .featured-2,
   .layout-sidebar-left.page-template-page-showcase .featured-4,
+  .layout-sidebar-left.page-template-page-showcase .featured-6,
   .layout-narrow-column.page-template-page-showcase .featured-2,
-  .layout-narrow-column.page-template-page-showcase .featured-4 {
+  .layout-narrow-column.page-template-page-showcase .featured-4,
+  .layout-narrow-column.page-template-page-showcase .featured-6 {
     margin-right: 30px;
   }
 }
@@ -111,7 +114,9 @@ Description: This file is only enqueued for page-showcase.php
     font-size: 16px;
   }
   .layout-single-column.page-template-page-showcase .featured-2,
-  .layout-single-column.page-template-page-showcase .featured-3 {
+  .layout-single-column.page-template-page-showcase .featured-3,
+  .layout-single-column.page-template-page-showcase .featured-5,
+  .layout-single-column.page-template-page-showcase .featured-6 {
     margin-right: 30px;
   }
 }

@@ -16,27 +16,21 @@ get_header(); ?>
 
 		// Get pages set in the customizer (if any)
 		$pages = array();
-		for ( $count = 1; $count <= 5; $count++ ) {
+		for ( $count = 1; $count <= 7; $count++ ) {
 			$mod = get_theme_mod( 'page-showcase-' . $count );
 			if ( 'luminate-none-selected' != $mod ) {
 				$pages[] = $mod;
 			}
 		}
 
-		// Display 4 items for single column layout, 5 for sidebar layout
-		$posts_to_show = 5;
-		if ( in_array( get_theme_mod( 'theme_layout', 'sidebar-right' ), array( 'single-column', 'narrow-column' ) ) ) {
-			$posts_to_show = 4;
-		}
-
 		$args = array(
-			'posts_per_page' => $posts_per_page,
+			'posts_per_page' => 7,
 			'post_type' => 'page',
 			'post__in' => $pages,
 			'orderby' => 'post__in'
 		);
 
-		$query = new WP_Query( $args );
+		$query = new WP_Query( apply_filters( 'luminate_showcase_args', $args ) );
 
 		if ( $query->have_posts() ) :
 			$count = 1;
@@ -49,8 +43,15 @@ get_header(); ?>
 
 				// If no image is set, we'll use a fallback image
 				if ( has_post_thumbnail() ) {
-					$image = wp_get_attachment_image_src( get_post_thumbnail_id(), $thumbnail, true )[0];
-					$class = "image-thumbnail";
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id(), $thumbnail, true );
+					// Additional error checking
+					if ( is_array( $image ) ) {
+						$image = $image[0];
+						$class = "image-thumbnail";
+					} else {
+						$image = get_template_directory_uri() . '/images/post.svg';
+						$class = 'fallback-thumbnail';
+					}
 				} else {
 					$image = get_template_directory_uri() . '/images/post.svg';
 					$class = 'fallback-thumbnail';
