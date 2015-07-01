@@ -54,30 +54,7 @@ class EDD_Theme_Updater_Admin {
 			$this->version = $theme->get( 'Version' );
 		}
 
-		// Strings
-		$strings = wp_parse_args( $strings, array(
-			'theme-license' => __( 'Theme License', 'theme-updater' ),
-			'enter-key' => __( 'Enter your theme license key.', 'theme-updater' ),
-			'license-key' => __( 'License Key', 'theme-updater' ),
-			'license-action' => __( 'License Action', 'theme-updater' ),
-			'deactivate-license' => __( 'Deactivate License', 'theme-updater' ),
-			'activate-license' => __( 'Activate License', 'theme-updater' ),
-			'status-unknown' => __( 'License status is unknown.', 'theme-updater' ),
-			'renew' => __( 'Renew?', 'theme-updater' ),
-			'unlimited' => __( 'unlimited', 'theme-updater' ),
-			'license-key-is-active' => __( 'License key is active.', 'theme-updater' ),
-			'expires%s' => __( 'Expires %s.', 'theme-updater' ),
-			'%1$s/%2$-sites' => __( 'You have %1$s / %2$s sites activated.', 'theme-updater' ),
-			'license-key-expired-%s' => __( 'License key expired %s.', 'theme-updater' ),
-			'license-key-expired' => __( 'License key has expired.', 'theme-updater' ),
-			'license-keys-do-not-match' => __( 'License keys do not match.', 'theme-updater' ),
-			'license-is-inactive' => __( 'License is inactive.', 'theme-updater' ),
-			'license-key-is-disabled' => __( 'License key is disabled.', 'theme-updater' ),
-			'site-is-inactive' => __( 'Site is inactive.', 'theme-updater' ),
-			'license-status-unknown' => __( 'License status is unknown.', 'theme-updater' ),
-			'update-notice' => __( "Updating this theme will lose any customizations you have made. 'Cancel' to stop, 'OK' to update.", 'theme-updater' ),
-			'update-available' => __('<strong>%1$s %2$s</strong> is available. <a href="%3$s" class="thickbox" title="%4s">Check out what\'s new</a> or <a href="%5$s"%6$s>update now</a>.', 'theme-updater' )
-		) );
+		// Strings are passed from theme-updater.php
 		$this->strings = $strings;
 
 		add_action( 'admin_init', array( $this, 'updater' ) );
