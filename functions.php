@@ -382,3 +382,9 @@ require get_template_directory() . '/inc/mods.php';
 
 // Theme Layouts
 require get_template_directory() . '/inc/theme-layouts.php';
+
+// Theme Updater
+function luminate_theme_updater() {
+	require( get_template_directory() . '/inc/updater/theme-updater.php' );
+}
+add_action( 'after_setup_theme', 'luminate_theme_updater' );

@@ -27,6 +27,7 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 ---
 
 * Enhancement: Allow additional pages to be used in showcase
+* Enhancement: Add auto-update functionality
 * Fix: Better error checking for showcase images
 
 1.0.1
