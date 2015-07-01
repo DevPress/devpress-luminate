@@ -23,7 +23,7 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 
 ## Change Log
 
-Development
+1.0.2
 ---
 
 * Enhancement: Allow additional pages to be used in showcase
