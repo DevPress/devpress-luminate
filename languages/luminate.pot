@@ -32,6 +32,10 @@ msgstr ""
 msgid "The page you are looking for doesn't exist. Try a search?"
 msgstr ""
 
+#: archive-jetpack-testimonial.php:13
+msgid "Testimonials"
+msgstr ""
+
 #: comments.php:38 comments.php:60
 msgid "Comment navigation"
 msgstr ""

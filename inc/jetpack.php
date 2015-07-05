@@ -28,7 +28,7 @@ function luminate_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
 		'render'    => 'luminate_infinite_scroll_render',
-		'footer'    => 'footer-widgets',
+		'footer'    => 'colophon'
 	) );
 
 }

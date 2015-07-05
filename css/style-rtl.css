@@ -643,7 +643,8 @@ a:hover {
 -------------------------------------------------------------- */
 /* Primary Menu
 -------------------------------------------------------------- */
-.offcanvas-open #wpadminbar {
+.offcanvas-open #wpadminbar,
+.sidr-animating #wpadminbar {
   position: fixed;
 }
 
@@ -1003,12 +1004,18 @@ a:hover {
 
 .page-header {
   background: #fff;
-  border-right: 5px solid #67acc0;
   padding: 15px 25px 15px;
-  margin: 30px 0 0;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+@media screen and (min-width: 480px) {
+  .page-header {
+    border-right: 5px solid #67acc0;
+    border-bottom: none;
+    margin: 30px 0 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+}
 .page-title {
   font-size: 22px;
   color: #333;
@@ -1195,6 +1202,37 @@ a:hover {
   font-size: 18px;
 }
 
+/* Testimonials
+--------------------------------------------------------------*/
+.jetpack-testimonial {
+  padding: 6%;
+}
+
+.testimonial-avatar {
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+.testimonial-avatar img {
+  border-radius: 50%;
+}
+
+.testimonial-cite {
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 510px) {
+  .testimonial-avatar {
+    float: right;
+  }
+
+  .testimonial-text {
+    float: right;
+    width: calc(100% - 121px );
+  }
+}
 /* Search & 404
 --------------------------------------------------------------*/
 .search-form label {
