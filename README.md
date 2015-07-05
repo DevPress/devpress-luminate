@@ -28,7 +28,6 @@ Development
 
 * Enhancement: Support for JetPack Infinite Scroll
 * Enhancement: Support for JetPack Testimonials
-* Enhancement: Support for JetPack Site Logo
 
 1.0.2
 ---

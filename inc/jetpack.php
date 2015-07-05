@@ -31,15 +31,6 @@ function luminate_jetpack_setup() {
 		'footer'    => 'footer-widgets',
 	) );
 
-	/**
-	 * Add a new image size for Site Logo
-	 */
-	add_image_size( 'luminate-logo', 640, 220 );
-
-	/**
-	 * Add theme support for Site Logo
-	 */
-	add_theme_support( 'site-logo', array( 'size' => 'luminate-logo' ) );
 }
 add_action( 'after_setup_theme', 'luminate_jetpack_setup' );
 

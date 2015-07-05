@@ -30,44 +30,41 @@ function luminate_customize_controls( $wp_customize ) {
 		'type'     => 'textarea'
 	) );
 
-	if ( ! function_exists( 'jetpack_the_site_logo' ) ) :
+	// Header Settings
+	$wp_customize->add_setting( 'display-site-title', array(
+		'default'    =>  1,
+		'transport'  =>  'refresh'
+	) );
 
-		// Header Settings
-		$wp_customize->add_setting( 'display-site-title', array(
-			'default'    =>  1,
-			'transport'  =>  'refresh'
-		) );
+	$wp_customize->add_control( 'display-site-title', array(
+		'label'     => __( 'Display Site Title', 'luminate' ),
+		'section'   => 'title_tagline',
+		'type'      => 'checkbox'
+	) );
 
-		$wp_customize->add_control( 'display-site-title', array(
-			'label'     => __( 'Display Site Title', 'luminate' ),
-			'section'   => 'title_tagline',
-			'type'      => 'checkbox'
-		) );
+	$wp_customize->add_setting( 'display-site-description', array(
+		'default'    =>  0,
+		'transport'  =>  'refresh'
+	) );
 
-		$wp_customize->add_setting( 'display-site-description', array(
-			'default'    =>  0,
-			'transport'  =>  'refresh'
-		) );
+	$wp_customize->add_control( 'display-site-description', array(
+		'label'     => __( 'Display Site Description', 'luminate' ),
+		'section'   => 'title_tagline',
+		'type'      => 'checkbox'
+	) );
 
-		$wp_customize->add_control( 'display-site-description', array(
-			'label'     => __( 'Display Site Description', 'luminate' ),
-			'section'   => 'title_tagline',
-			'type'      => 'checkbox'
-		) );
+	$wp_customize->add_setting( 'logo', array(
+		'sanitize_callback' => 'esc_url_raw',
+	) );
 
-		$wp_customize->add_setting( 'logo', array(
-			'sanitize_callback' => 'esc_url_raw',
-		) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'logo',
+		array(
+			'label'    => __( 'Logo', 'luminate' ),
+			'section'  => 'title_tagline',
+			'settings' => 'logo'
+		)
+	) );
 
-		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'logo',
-			array(
-				'label'    => __( 'Logo', 'luminate' ),
-				'section'  => 'title_tagline',
-				'settings' => 'logo'
-			)
-		) );
-
-	endif;
 
 	// Template Settings
 	$wp_customize->add_section( 'page-showcase' , array(
