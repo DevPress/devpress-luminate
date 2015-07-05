@@ -104,15 +104,15 @@ msgstr ""
 msgid "Text will display in top navigation bar."
 msgstr ""
 
-#: inc/customizer.php:42
+#: inc/customizer.php:40
 msgid "Display Site Title"
 msgstr ""
 
-#: inc/customizer.php:53
+#: inc/customizer.php:51
 msgid "Display Site Description"
 msgstr ""
 
-#: inc/customizer.php:64
+#: inc/customizer.php:62
 msgid "Logo"
 msgstr ""
 
@@ -120,27 +120,27 @@ msgstr ""
 msgid "Page Showcase"
 msgstr ""
 
-#: inc/customizer.php:87
+#: inc/customizer.php:84
 msgid "Select Page"
 msgstr ""
 
-#: inc/customizer.php:94 inc/customizer.php:103 templates/page-showcase.php:87
+#: inc/customizer.php:91 inc/customizer.php:100 templates/page-showcase.php:87
 msgid "Read More"
 msgstr ""
 
-#: inc/customizer.php:99
+#: inc/customizer.php:96
 msgid "Link text. Set blank to hide."
 msgstr ""
 
-#: inc/customizer.php:116
+#: inc/customizer.php:113
 msgid "Highlight Color"
 msgstr ""
 
-#: inc/customizer.php:128
+#: inc/customizer.php:125
 msgid "Highlight Hover"
 msgstr ""
 
-#: inc/customizer.php:143
+#: inc/customizer.php:140
 msgid "Site Title, Tagline and Logo"
 msgstr ""
 

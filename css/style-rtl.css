@@ -643,6 +643,10 @@ a:hover {
 -------------------------------------------------------------- */
 /* Primary Menu
 -------------------------------------------------------------- */
+.offcanvas-open #wpadminbar {
+  position: fixed;
+}
+
 #primary-navigation {
   font-size: 15px;
   font-weight: 500;

@@ -1,6 +1,11 @@
 /* Primary Menu
 -------------------------------------------------------------- */
 
+.offcanvas-open #wpadminbar,
+.sidr-animating #wpadminbar {
+	position: fixed;
+}
+
 #primary-navigation {
 
 	font-size: 15px;

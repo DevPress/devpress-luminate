@@ -28,6 +28,7 @@ Development
 
 * Enhancement: Support for JetPack Infinite Scroll
 * Enhancement: Support for JetPack Testimonials
+* Enhancement: Better menu support when admin menu is active
 
 1.0.2
 ---
