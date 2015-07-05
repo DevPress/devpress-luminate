@@ -23,6 +23,13 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 
 ## Change Log
 
+Development
+---
+
+* Enhancement: Support for JetPack Infinite Scroll
+* Enhancement: Support for JetPack Testimonials
+* Enhancement: Support for JetPack Site Logo
+
 1.0.2
 ---
 

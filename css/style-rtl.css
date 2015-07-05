@@ -4,7 +4,7 @@ Theme URI: https://devpress.com/luminate
 Author: DevPress
 Author URI: https://devpress.com
 Description: Luminate allows you to quickly set up a website for your small business or organization.
-Version: 1.0.2
+Version: 0.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: luminate
@@ -1239,7 +1239,13 @@ a:hover {
 }
 
 #calendar_wrap {
+  font-size: 14px;
   overflow-x: scroll;
+}
+
+#calendar_wrap th,
+#calendar_wrap td {
+  padding: 5px;
 }
 
 @media screen and (max-width: 881px) {
@@ -1764,12 +1770,12 @@ object {
 
 #infinite-handle span {
   background: #fff;
-  border-radius: 4px;
+  font-size: 15px;
+  border-radius: 2px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   overflow: hidden;
-  color: #333;
-  font-size: 16px;
+  color: #67acc0;
   padding: 15px 60px;
   display: block;
   text-align: center;
@@ -1779,6 +1785,10 @@ object {
   text-decoration: underline;
 }
 
+#infinite-handle button {
+  box-shadow: none;
+}
+
 .infinite-loader {
   position: absolute;
   right: 50%;
@@ -1786,14 +1796,8 @@ object {
 }
 
 /* Globally hide elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .paging-navigation,
-.infinite-scroll.neverending .site-footer {
+.infinite-scroll .posts-navigation {
   display: none;
-}
-
-/* Show footer when scrolling ends */
-.infinity-end.neverending .site-footer {
-  display: block;
 }
 
 .entry-content .sharedaddy {

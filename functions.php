@@ -8,7 +8,7 @@
 /**
  * The current version of the theme.
  */
-define( 'LUMINATE_VERSION', '1.0.2' );
+define( 'LUMINATE_VERSION', '0.0.2' );
 
 if ( ! function_exists( 'luminate_setup' ) ) :
 /**
@@ -382,6 +382,9 @@ require get_template_directory() . '/inc/mods.php';
 
 // Theme Layouts
 require get_template_directory() . '/inc/theme-layouts.php';
+
+// JetPack
+require get_template_directory() . '/inc/jetpack.php';
 
 // Theme Updater
 function luminate_theme_updater() {

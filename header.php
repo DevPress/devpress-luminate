@@ -48,12 +48,16 @@
 			<div class="col-width clearfix">
 				<div class="brand">
 
-					<?php if ( get_theme_mod( 'logo', 0 ) ) : ?>
-					<div class="site-logo">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<img src="<?php echo esc_url( get_theme_mod( 'logo' ) ); ?>" alt="<?php esc_attr( get_bloginfo( 'name' ) ); ?>">
-						</a>
-					</div>
+					<?php if ( function_exists( 'jetpack_the_site_logo' ) ) : ?>
+						<?php jetpack_the_site_logo(); ?>
+					<?php else : ?>
+						<?php if ( get_theme_mod( 'logo', 0 ) ) : ?>
+						<div class="site-logo">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+								<img src="<?php echo esc_url( get_theme_mod( 'logo' ) ); ?>" alt="<?php esc_attr( get_bloginfo( 'name' ) ); ?>">
+							</a>
+						</div>
+						<?php endif; ?>
 					<?php endif; ?>
 
 					<?php if ( luminate_brand_text() ) : ?>
