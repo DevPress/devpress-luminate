@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Luminate 1.0.2\n"
+"Project-Id-Version: Luminate 1.1.0\n"
 "Report-Msgid-Bugs-To: https://devpress.com/\n"
 "POT-Creation-Date: 2015-06-04 16:01:24+00:00\n"
 "MIME-Version: 1.0\n"

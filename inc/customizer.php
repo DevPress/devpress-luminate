@@ -188,6 +188,7 @@ function luminate_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'luminate_customize_preview_js' );
 
+if ( ! function_exists( 'luminate_sanitize_textarea' ) ) :
 /**
  * Sanitize textarea.
  *
@@ -202,6 +203,7 @@ function luminate_sanitize_textarea( $content ) {
 	return wp_kses( $content, wp_kses_allowed_html( 'post' ) );
 
 }
+endif;
 
 if ( ! function_exists( 'sanitize_hex_color' ) ) :
 /**
