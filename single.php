@@ -15,7 +15,10 @@ get_header(); ?>
 
 				<?php get_template_part( 'partials/content', 'single' ); ?>
 
-				<?php the_post_navigation(); ?>
+				<?php the_post_navigation( array(
+					'prev_text' => _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'luminate' ),
+					'next_text' => _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link', 'luminate' )
+				) ); ?>
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template

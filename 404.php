@@ -13,7 +13,7 @@ get_header(); ?>
 			<div id="error-404" class="module">
 
 					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( '404 — Page Not Found', 'luminate' ); ?></h1>
+						<h1 class="entry-title"><?php _e( '404 - Page Not Found', 'luminate' ); ?></h1>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">

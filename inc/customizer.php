@@ -127,6 +127,23 @@ function luminate_customize_controls( $wp_customize ) {
 		'settings' => 'highlight-hover'
 	) ) );
 
+	// Footer
+	$wp_customize->add_section( 'footer' , array(
+		'title'      => __( 'Footer', 'luminate' ),
+		'priority'   => 100,
+	) );
+
+	$wp_customize->add_setting( 'footer-text', array(
+		'default'           => '',
+		'sanitize_callback' => 'luminate_sanitize_textarea'
+	) );
+
+	$wp_customize->add_control( 'footer-text', array(
+		'label'    => __( 'Footer Text', 'luminate' ),
+		'section'  => 'footer',
+		'type'     => 'textarea'
+	) );
+
 }
 add_action( 'customize_register', 'luminate_customize_controls' );
 
