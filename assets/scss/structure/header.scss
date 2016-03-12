@@ -1,0 +1,70 @@
+/* Header
+-------------------------------------------------------------- */
+
+.site-branding {
+	background-color: #fff;
+	color: #666;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.site-branding .col-width {
+	position: relative;
+	padding: 30px 30px 35px;
+}
+@media screen and (max-width:479px) {
+	.site-branding .col-width {
+		padding: 30px 6% 35px;
+	}
+}
+.site-brand {
+	float: left;
+}
+.site-logo {
+	margin: 0;
+	line-height: 1;
+	float: left;
+	margin-right: 30px;
+}
+.site-logo img {
+	max-height: 100px;
+}
+.brand-text {
+	float: left;
+}
+.site-title {
+	font-size:34px;
+	line-height: 1;
+	margin: 0;
+	font-family: $secondary-font;
+	margin-top: 10px;
+}
+.site-title a {
+	position: relative;
+	color: #444;
+	text-decoration: none;
+}
+.site-title a:hover {
+	color: #aaa;
+}
+.site-description {
+	font-family: $primary-font;
+	font-size: 16px;
+	line-height: 1;
+	margin:0;
+	margin-top:10px;
+}
+
+@media screen and (min-width:1160px) {
+	.site-branding .col-width {
+		padding: 30px 30px 35px;
+	}
+	.brand {
+		max-width: 40%;
+		float: left;
+	}
+	#primary-navigation-section {
+		float: right;
+		max-width: 60%;
+		margin-top: 5px;
+		margin-right: -12px;
+	}
+}

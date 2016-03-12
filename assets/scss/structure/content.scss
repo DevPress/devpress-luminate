@@ -1,0 +1,103 @@
+/* Content
+--------------------------------------------------------------*/
+
+.sticky {
+}
+.entry-header {
+	padding: 4% 6%;
+}
+.entry-title {
+	font-size: 30px;
+	line-height: 1.25;
+}
+.page .entry-title {
+	margin: 0;
+}
+.entry-title a:hover {
+	text-decoration: none;
+}
+.page-header {
+	background:#fff;
+	padding: 15px 25px 15px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 480px ) {
+	.page-header {
+		border-left: 5px solid $highlight-color;
+		border-bottom: none;
+		margin: 30px 0 0;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	}
+}
+.page-title {
+	font-size: 22px;
+	color: #333;
+	margin:0;
+}
+.taxonomy-description {
+	margin-top: 1em;
+	font-size: 16px;
+}
+.entry-meta {
+	color:#666;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+.entry-meta a {
+	color:#666;
+}
+.entry-image-section {
+	position: relative;
+}
+.entry-image-link,
+.entry-image img {
+	display: block;
+}
+.entry-image {
+	display: block;
+	position: relative;
+	margin: 0 6% 4%;
+	overflow: hidden;
+}
+.entry-image:before {
+	z-index: 1;
+	display: block;
+	content: '';
+	box-shadow: inset 0 0 100px rgba(0,0,0,.2);
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+.entry-image img {
+	width:100%;
+}
+.entry-image-section .overlay {
+	position: absolute;
+	background: rgba(0,0,0,.4);
+	color: #fff;
+	font-size: 13px;
+	padding: 10px;
+	border-radius: 4px;
+}
+.overlay-top-right {
+	top: 15px;
+	right: 15px;
+}
+.overlay-bottom-right {
+	bottom: 15px;
+	right: 15px;
+}
+.entry-content,
+.author-meta,
+.entry-footer-meta {
+	padding: 0 6% 6%;
+}
+@media screen and (min-width:510px) {
+	.entry-content,
+	.author-meta,
+	.entry-footer-meta {
+		padding: 0 6% 4%;
+	}
+}

@@ -26,7 +26,8 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 Development
 ---
 
-* Update: Change directory structure of assets
+* Update: Change directory structure for assets
+* Update: Break Sass files into components
 
 1.1.0 (07/15/2015)
 ---

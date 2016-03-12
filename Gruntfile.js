@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 			  	},
 			  	files: {
 					'css/style.css':'assets/scss/style.scss',
-					'css/page-showcase.css':'assets/scss/page-showcase.scss'
+					'css/page-showcase.css':'assets/scss/templates/page-showcase.scss'
 				}
 			}
 		},

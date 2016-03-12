@@ -1,0 +1,50 @@
+/* Theme Globals
+-------------------------------------------------------------- */
+
+html {
+	height: 100%;
+}
+body {
+	font-family: $primary-font;
+	background: #f2f2f2;
+	color: #444;
+	font-size: $primary-font-size;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	word-wrap: break-word;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+/* @noflip */
+body.rtl {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: $secondary-font;
+	font-weight: 400;
+	margin-bottom: .5em;
+}
+h1 {
+	font-size: 30px;
+}
+h2 {
+	font-size: 26px;
+}
+h3 {
+	font-size: 22px;
+}
+h4, h5, h6 {
+	font-size: 18px;
+}
+a {
+	color: $highlight-color;
+	text-decoration: none;
+	transition: all 0.2s ease;
+	word-wrap: break-word;
+}
+a:hover {
+	color: darken( $highlight-color, 10% );
+	text-decoration: underline;
+}
