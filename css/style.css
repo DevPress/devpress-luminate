@@ -1230,7 +1230,7 @@ a:hover {
 
   .testimonial-text {
     float: left;
-    width: calc(100% - 121px );
+    width: calc( 100% - 121px );
   }
 }
 /* Search & 404
@@ -1845,3 +1845,5 @@ object {
 .entry-content .sharedaddy {
   padding-top: 30px;
 }
+
+/*# sourceMappingURL=style.css.map */

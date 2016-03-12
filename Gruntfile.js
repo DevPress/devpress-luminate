@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
-			files: ['scss/*.scss'],
+			files: ['assets/scss/*.scss'],
 			tasks: 'sass',
 			options: {
 				livereload: true,
@@ -19,8 +19,8 @@ module.exports = function(grunt) {
 			  		style : 'expanded'
 			  	},
 			  	files: {
-					'css/style.css':'scss/style.scss',
-					'css/page-showcase.css':'scss/page-showcase.scss'
+					'css/style.css':'assets/scss/style.scss',
+					'css/page-showcase.css':'assets/scss/page-showcase.scss'
 				}
 			}
 		},
@@ -53,12 +53,12 @@ module.exports = function(grunt) {
 		concat: {
 		    release: {
 		        src: [
-		            'js/skip-link-focus-fix.js',
-		            'js/jquery.fastclick.js',
-		            'js/sidr.js',
-		            'js/theme.js'
+		            'assets/js/skip-link-focus-fix.js',
+		            'assets/js/jquery.fastclick.js',
+		            'assets/js/sidr.js',
+		            'assets/js/theme.js'
 		        ],
-		        dest: 'js/luminate.min.js',
+		        dest: 'js/luminate.min.js'
 		    }
 		},
 		uglify: {
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
 		    release: {
 			    files: {
 				    'js/luminate.min.js' : 'js/luminate.min.js',
-				    'js/jquery.fitvids.min.js' : 'js/jquery.fitvids.js'
+				    'js/jquery.fitvids.min.js' : 'assets/js/jquery.fitvids.js'
 				}
 		    }
 		},
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
 	    replace: {
 			styleVersion: {
 				src: [
-					'scss/style.scss',
+					'assets/scss/style.scss',
 					'style.css'
 				],
 				overwrite: true,

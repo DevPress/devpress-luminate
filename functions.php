@@ -222,7 +222,7 @@ if ( ! function_exists( 'luminate_icon_fonts' ) ) :
 function luminate_icon_fonts() {
 
 	// Icon Font
-	wp_enqueue_style( 'luminate-icons', get_template_directory_uri() . '/fonts/luminate-icons.css', array(), '1.0.0' );
+	wp_enqueue_style( 'luminate-icons', get_template_directory_uri() . '/assets/fonts/luminate-icons.css', array(), '1.0.0' );
 
 }
 add_action( 'wp_enqueue_scripts', 'luminate_icon_fonts' );
@@ -301,7 +301,7 @@ function luminate_scripts() {
 		// FitVids Script conditionally enqueued from inc/extras.php
 		wp_register_script(
 			'luminate-fitvids',
-			get_template_directory_uri() . '/js/jquery.fitvids.js',
+			get_template_directory_uri() . '/assets/js/jquery.fitvids.js',
 			array( 'jquery' ),
 			LUMINATE_VERSION,
 			true
@@ -309,7 +309,7 @@ function luminate_scripts() {
 
 		wp_enqueue_script(
 			'luminate-skip-link-focus-fix',
-			get_template_directory_uri() . '/js/skip-link-focus-fix.js',
+			get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js',
 			array(),
 			LUMINATE_VERSION,
 			true
@@ -317,7 +317,7 @@ function luminate_scripts() {
 
 		wp_enqueue_script(
 			'luminate-fast-click',
-			get_template_directory_uri() . '/js/jquery.fastclick.js',
+			get_template_directory_uri() . '/assets/js/jquery.fastclick.js',
 			array(),
 			LUMINATE_VERSION,
 			true
@@ -325,7 +325,7 @@ function luminate_scripts() {
 
 		wp_enqueue_script(
 			'luminate-sidr',
-			get_template_directory_uri() . '/js/sidr.js',
+			get_template_directory_uri() . '/assets/js/sidr.js',
 			array(),
 			LUMINATE_VERSION,
 			true
@@ -333,7 +333,7 @@ function luminate_scripts() {
 
 		wp_enqueue_script(
 			'luminate-global',
-			get_template_directory_uri() . '/js/theme.js',
+			get_template_directory_uri() . '/assets/js/theme.js',
 			array( 'jquery' ),
 			LUMINATE_VERSION,
 			true

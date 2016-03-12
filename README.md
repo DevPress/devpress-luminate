@@ -23,6 +23,11 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 
 ## Change Log
 
+Development
+---
+
+* Update: Change directory structure of assets
+
 1.1.0 (07/15/2015)
 ---
 
