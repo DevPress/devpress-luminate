@@ -48,8 +48,8 @@
 			<div class="col-width clearfix">
 				<div class="brand">
 
-					<?php if ( function_exists( 'jetpack_the_site_logo' ) ) : ?>
-						<?php jetpack_the_site_logo(); ?>
+					<?php if ( function_exists( 'the_custom_logo' ) ) : ?>
+						<?php the_custom_logo(); ?>
 					<?php else : ?>
 						<?php if ( get_theme_mod( 'logo', 0 ) ) : ?>
 						<div class="site-logo">

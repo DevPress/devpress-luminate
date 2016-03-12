@@ -86,6 +86,9 @@ function luminate_setup() {
 	// Excerpt support needed for page showcase template
 	add_post_type_support( 'page', 'excerpt' );
 
+	// Support custom logo feature
+	add_theme_support( 'custom-logo', array( 'size' => 'luminate-showcase' ) );
+
 }
 add_action( 'after_setup_theme', 'luminate_setup' );
 endif; // luminate_setup

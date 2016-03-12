@@ -28,6 +28,7 @@ Development
 
 * Update: Change directory structure for assets
 * Update: Break Sass files into components
+* Update: Support new custom-logo feature in WordPress 4.5
 
 1.1.0 (07/15/2015)
 ---

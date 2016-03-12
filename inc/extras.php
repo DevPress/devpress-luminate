@@ -114,3 +114,33 @@ function luminate_embed_container( $html, $url, $attr ) {
 }
 add_filter( 'embed_handler_html', 'luminate_embed_container', 10, 3 );
 add_filter( 'embed_oembed_html' , 'luminate_embed_container', 10, 3 );
+
+/**
+ * Theme Update Script
+ *
+ * If version number saved in theme_mod doesn't match current version run updates.
+ */
+function luminate_update_check() {
+
+	$ver = get_theme_mod( 'version', false );
+
+	// Return if update has already been run
+	if ( LUMINATE_VERSION === $ver ) {
+		return;
+	}
+
+	// If a logo has been set previously, update to use logo feature introduced in WordPress 4.5
+	if ( function_exists( 'the_custom_logo' ) && get_theme_mod( 'logo', false ) ) {
+
+		// Since previous logo was stored a URL, convert it to an attachment ID
+		$logo = attachment_url_to_postid( get_theme_mod( 'logo' ) );
+		if ( is_int( $logo ) ) {
+			set_theme_mod( 'custom_logo', attachment_url_to_postid( get_theme_mod( 'logo' ) ) );
+		}
+		remove_theme_mod( 'logo' );
+	}
+
+	set_theme_mod( 'version', LUMINATE_VERSION );
+
+}
+add_action( 'after_setup_theme', 'luminate_update_check' );
