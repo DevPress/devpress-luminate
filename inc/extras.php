@@ -118,14 +118,14 @@ add_filter( 'embed_oembed_html' , 'luminate_embed_container', 10, 3 );
 /**
  * Theme Update Script
  *
- * If version number saved in theme_mod doesn't match current version run updates.
+ * Runs if version number saved in theme_mod "version" doesn't match current theme version.
  */
 function luminate_update_check() {
 
 	$ver = get_theme_mod( 'version', false );
 
 	// Return if update has already been run
-	if ( LUMINATE_VERSION === $ver ) {
+	if ( version_compare( $ver, LUMINATE_VERSION ) >= 0 ) {
 		return;
 	}
 
