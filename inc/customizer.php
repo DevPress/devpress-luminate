@@ -53,7 +53,7 @@ function luminate_customize_controls( $wp_customize ) {
 		'type'      => 'checkbox'
 	) );
 
-	if ( ! function_exists( 'the_custom_logo111' ) ) :
+	if ( ! function_exists( 'the_custom_logo' ) ) :
 		$wp_customize->add_setting( 'logo', array(
 			'sanitize_callback' => 'esc_url_raw',
 		) );
