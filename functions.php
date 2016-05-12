@@ -8,7 +8,7 @@
 /**
  * The current version of the theme.
  */
-define( 'LUMINATE_VERSION', '1.1.0' );
+define( 'LUMINATE_VERSION', '1.2.0' );
 
 if ( ! function_exists( 'luminate_setup' ) ) :
 /**
@@ -237,56 +237,27 @@ if ( ! function_exists( 'luminate_styles' ) ) :
  */
 function luminate_styles() {
 
-	if ( SCRIPT_DEBUG || WP_DEBUG ) :
+	wp_enqueue_style(
+		'luminate-style',
+		get_template_directory_uri() . '/css/style.min.css',
+		array(),
+		LUMINATE_VERSION
+	);
 
-	 	wp_enqueue_style(
-			'luminate-style',
-			get_template_directory_uri() . '/css/style.css',
-			array(),
-			LUMINATE_VERSION
-		);
+	// Use style-rtl.css for RTL layouts
+	wp_style_add_data(
+		'luminate-style',
+		'rtl',
+		'replace'
+	);
 
-		// Use style-rtl.css for RTL layouts
-		wp_style_add_data(
-			'luminate-style',
-			'rtl',
-			'replace'
-		);
-
-		if ( is_page_template( 'templates/page-showcase.php' ) ) :
-			wp_enqueue_style(
-				'luminate-page-showcase',
-				get_template_directory_uri() . '/css/page-showcase.css',
-				array(),
-				LUMINATE_VERSION
-			);
-		endif;
-
-	else :
-
+	if ( is_page_template( 'templates/page-showcase.php' ) ) :
 		wp_enqueue_style(
-			'luminate-style',
-			get_template_directory_uri() . '/css/style.min.css',
+			'luminate-page-showcase',
+			get_template_directory_uri() . '/css/page-showcase.min.css',
 			array(),
 			LUMINATE_VERSION
 		);
-
-		// Use style-rtl.css for RTL layouts
-		wp_style_add_data(
-			'luminate-style',
-			'rtl',
-			'replace'
-		);
-
-		if ( is_page_template( 'templates/page-showcase.php' ) ) :
-			wp_enqueue_style(
-				'luminate-page-showcase',
-				get_template_directory_uri() . '/css/page-showcase.min.css',
-				array(),
-				LUMINATE_VERSION
-			);
-		endif;
-
 	endif;
 
 }
@@ -299,69 +270,22 @@ if ( ! function_exists( 'luminate_scripts' ) ) :
  */
 function luminate_scripts() {
 
-	if ( SCRIPT_DEBUG || WP_DEBUG ) :
+	// FitVids Script conditionally enqueued from inc/extras.php
+	wp_register_script(
+		'luminate-fitvids',
+		get_template_directory_uri() . '/js/jquery.fitvids.min.js',
+		array( 'jquery' ),
+		LUMINATE_VERSION,
+		true
+	);
 
-		// FitVids Script conditionally enqueued from inc/extras.php
-		wp_register_script(
-			'luminate-fitvids',
-			get_template_directory_uri() . '/assets/js/jquery.fitvids.js',
-			array( 'jquery' ),
-			LUMINATE_VERSION,
-			true
-		);
-
-		wp_enqueue_script(
-			'luminate-skip-link-focus-fix',
-			get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js',
-			array(),
-			LUMINATE_VERSION,
-			true
-		);
-
-		wp_enqueue_script(
-			'luminate-fast-click',
-			get_template_directory_uri() . '/assets/js/jquery.fastclick.js',
-			array(),
-			LUMINATE_VERSION,
-			true
-		);
-
-		wp_enqueue_script(
-			'luminate-sidr',
-			get_template_directory_uri() . '/assets/js/sidr.js',
-			array(),
-			LUMINATE_VERSION,
-			true
-		);
-
-		wp_enqueue_script(
-			'luminate-global',
-			get_template_directory_uri() . '/assets/js/theme.js',
-			array( 'jquery' ),
-			LUMINATE_VERSION,
-			true
-		);
-
-	else :
-
-		// FitVids Script conditionally enqueued from inc/extras.php
-		wp_register_script(
-			'luminate-fitvids',
-			get_template_directory_uri() . '/js/jquery.fitvids.min.js',
-			array( 'jquery' ),
-			LUMINATE_VERSION,
-			true
-		);
-
-		wp_enqueue_script(
-			'luminate-scripts',
-			get_template_directory_uri() . '/js/luminate.min.js',
-			array( 'jquery' ),
-			LUMINATE_VERSION,
-			true
-		);
-
-	endif;
+	wp_enqueue_script(
+		'luminate-scripts',
+		get_template_directory_uri() . '/js/luminate.min.js',
+		array( 'jquery' ),
+		LUMINATE_VERSION,
+		true
+	);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

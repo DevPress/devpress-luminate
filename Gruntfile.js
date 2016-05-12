@@ -7,8 +7,8 @@ module.exports = function(grunt) {
     grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
-			files: ['assets/scss/*.scss'],
-			tasks: 'sass',
+			files: ['assets/scss/**/*.scss', 'assets/js/**/*.js'],
+			tasks: ['sass', 'postcss', 'cssmin', 'concat', 'uglify'],
 			options: {
 				livereload: true,
 			},
@@ -51,10 +51,9 @@ module.exports = function(grunt) {
 		    }
 		},
 		concat: {
-		    release: {
+		    default: {
 		        src: [
 		            'assets/js/skip-link-focus-fix.js',
-		            'assets/js/jquery.fastclick.js',
 		            'assets/js/sidr.js',
 		            'assets/js/theme.js'
 		        ],
@@ -68,7 +67,7 @@ module.exports = function(grunt) {
       			},
 				drop_console: true
 			},
-		    release: {
+		    default: {
 			    files: {
 				    'js/luminate.min.js' : 'js/luminate.min.js',
 				    'js/jquery.fitvids.min.js' : 'assets/js/jquery.fitvids.js'
@@ -140,6 +139,9 @@ module.exports = function(grunt) {
 	grunt.registerTask( 'default', [
 		'sass',
 		'postcss',
+		'cssmin',
+    	'concat',
+		'uglify'
     ]);
 
     grunt.registerTask( 'release', [
@@ -147,8 +149,8 @@ module.exports = function(grunt) {
     	'sass',
     	'postcss',
     	'cssmin',
-    	'concat:release',
-		'uglify:release',
+    	'concat',
+		'uglify',
 		'makepot',
 		'cssjanus'
 	]);

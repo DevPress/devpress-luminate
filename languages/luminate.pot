@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Luminate 1.1.0\n"
+"Project-Id-Version: Luminate 1.2.0\n"
 "Report-Msgid-Bugs-To: https://devpress.com/\n"
 "POT-Creation-Date: 2015-06-04 16:01:24+00:00\n"
 "MIME-Version: 1.0\n"
@@ -80,11 +80,11 @@ msgstr ""
 msgid "Sidebar Left"
 msgstr ""
 
-#: functions.php:155 inc/extras.php:81
+#: functions.php:158 inc/extras.php:81
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:165 inc/customizer.php:132
+#: functions.php:168 inc/customizer.php:133
 msgid "Footer"
 msgstr ""
 
@@ -116,7 +116,7 @@ msgstr ""
 msgid "Display Site Description"
 msgstr ""
 
-#: inc/customizer.php:62
+#: inc/customizer.php:63
 msgid "Logo"
 msgstr ""
 
@@ -124,31 +124,31 @@ msgstr ""
 msgid "Page Showcase"
 msgstr ""
 
-#: inc/customizer.php:84
+#: inc/customizer.php:85
 msgid "Select Page"
 msgstr ""
 
-#: inc/customizer.php:91 inc/customizer.php:100 templates/page-showcase.php:87
+#: inc/customizer.php:92 inc/customizer.php:101 templates/page-showcase.php:87
 msgid "Read More"
 msgstr ""
 
-#: inc/customizer.php:96
+#: inc/customizer.php:97
 msgid "Link text. Set blank to hide."
 msgstr ""
 
-#: inc/customizer.php:113
+#: inc/customizer.php:114
 msgid "Highlight Color"
 msgstr ""
 
-#: inc/customizer.php:125
+#: inc/customizer.php:126
 msgid "Highlight Hover"
 msgstr ""
 
-#: inc/customizer.php:142
+#: inc/customizer.php:143
 msgid "Footer Text"
 msgstr ""
 
-#: inc/customizer.php:157
+#: inc/customizer.php:158
 msgid "Site Title, Tagline and Logo"
 msgstr ""
 
@@ -349,7 +349,7 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:192
+#: functions.php:195
 #. Translators: If there are characters in your language that are not
 #. * supported by Lora, translate this to 'off'. Do not translate
 #. * into your own language.

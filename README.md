@@ -23,12 +23,13 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 
 ## Change Log
 
-Development
+1.2.0 (05/12/2016)
 ---
 
-* Update: Change directory structure for assets
-* Update: Break Sass files into components
 * Update: Support new custom-logo feature in WordPress 4.5
+* Update: Change directory structure for assets
+* Update: Break sass files into components
+* Update: Remove fastclick.js
 
 1.1.0 (07/15/2015)
 ---
