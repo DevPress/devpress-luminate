@@ -54,7 +54,7 @@
 			$('.main-navigation .menu > .menu-item-has-children').append( '<span class="dropdown-toggle" />');
 
 			// When mobile submenu is tapped/clicked
-			$('.dropdown-toggle').fastClick( function() {
+			$('.dropdown-toggle').on( 'click', function() {
 				var $submenu = $(this).parent().find('.children, .sub-menu'),
 					$toggle = $(this);
 				$submenu.toggle( 0, function() {
