@@ -4,21 +4,27 @@
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
+
 p {
 	margin-bottom: 1em;
 }
+
 b, strong {
 	font-weight: bold;
 }
+
 dfn, cite, em, i {
 	font-style: italic;
 }
+
 blockquote {
 	margin: 0 1em;
 }
+
 address {
 	margin: 0 0 1em;
 }
+
 pre {
 	background: rgba(0,0,0,.05);
 	font-family: "Courier 10 Pitch", Courier, monospace;
@@ -29,17 +35,21 @@ pre {
 	overflow: auto;
 	padding: 15px;
 }
+
 code, kbd, tt, var {
 	font: 14px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
+
 abbr, acronym {
 	border-bottom: 1px dotted #666;
 	cursor: help;
 }
+
 mark, ins {
 	background: #fff9c0;
 	text-decoration: none;
 }
+
 sup,
 sub {
 	font-size: 75%;
@@ -48,15 +58,19 @@ sub {
 	position: relative;
 	vertical-align: baseline;
 }
+
 sup {
 	bottom: 1ex;
 }
+
 sub {
 	top: .5ex;
 }
+
 small {
 	font-size: 80%;
 }
+
 big {
 	font-size: 120%;
 }

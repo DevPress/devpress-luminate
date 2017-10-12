@@ -22,13 +22,16 @@ object {
 	margin-bottom: 15px;
 	max-width: 100%;
 }
+
 .wp-caption img[class*="wp-image-"] {
 	display: block;
 	margin: 0 auto;
 }
+
 .wp-caption-text {
 	text-align: center;
 }
+
 .wp-caption .wp-caption-text {
 	font-size: $secondary-font-size;
 	margin: 5px 0;
@@ -39,44 +42,56 @@ object {
 .gallery {
 	margin-bottom: 20px;
 }
+
 .gallery-item {
 	display: inline-block;
 	text-align: center;
 	vertical-align: top;
 	width: 100%;
 }
+
 .gallery-item img {
 	width:100%;
 	display: block;
-	padding-right:5%;
-	padding-bottom:5%;
+	padding-right: 5%;
+	padding-bottom: 5%;
 }
+
 .gallery-columns-1 .gallery-item img {
-	padding-right:0;
-	padding-bottom:15px;
+	padding-right: 0;
+	padding-bottom: 15px;
 }
+
 .gallery-columns-2 .gallery-item {
 	max-width: 50%;
 }
+
 .gallery-columns-3 .gallery-item {
 	max-width: 33.33%;
 }
+
 .gallery-columns-4 .gallery-item {
 	max-width: 25%;
 }
+
 .gallery-columns-5 .gallery-item {
 	max-width: 20%;
 }
+
 .gallery-columns-6 .gallery-item {
 	max-width: 16.66%;
 }
+
 .gallery-columns-7 .gallery-item {
 	max-width: 14.28%;
 }
+
 .gallery-columns-8 .gallery-item {
 	max-width: 12.5%;
 }
+
 .gallery-columns-9 .gallery-item {
 	max-width: 11.11%;
 }
+
 .gallery-caption {}

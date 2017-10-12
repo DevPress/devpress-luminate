@@ -4,13 +4,16 @@
 .jetpack-testimonial {
 	padding: 6%;
 }
+
 .testimonial-avatar {
 	margin-right: 30px;
 	margin-bottom: 15px;
 }
+
 .testimonial-avatar img {
 	border-radius: 50%;
 }
+
 .testimonial-cite {
 	font-weight: 600;
 	font-size: 14px;
@@ -18,11 +21,14 @@
 }
 
 @media screen and (min-width:510px) {
+
 	.testimonial-avatar {
 		float: left;
 	}
+
 	.testimonial-text {
-		float:left;
-		width: calc( 100% - 121px );
+		float: left;
+		width: calc(100% - 121px);
 	}
+
 }

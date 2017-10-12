@@ -5,10 +5,10 @@
  */
 (function($) {
 
- 	var luminate = {
+	var luminate = {
 
- 		// Cache selectors
-	 	cache: {
+		// Cache selectors
+		cache: {
 			$document: $(document),
 			$window: $(window),
 			$page: $('#page')
@@ -120,8 +120,8 @@
 			};
 		}
 
- 	};
+	};
 
- 	luminate.init();
+	luminate.init();
 
- })(jQuery);
+})(jQuery);

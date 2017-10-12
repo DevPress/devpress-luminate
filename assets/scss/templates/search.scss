@@ -2,16 +2,19 @@
 --------------------------------------------------------------*/
 
 .search-form label {
-	width:100%;
-	padding-right:59px;
-	float:left;
+	width: 100%;
+	padding-right: 59px;
+	float: left;
 }
-.search-form input, .search-form button {
+
+.search-form input,
+.search-form button {
 	margin: 0;
 }
+
 .search-form .search-submit {
 	width: 54px;
-	margin-left:-54px;
-	float:left;
-	height:38px;
+	margin-left: -54px;
+	float: left;
+	height: 38px;
 }

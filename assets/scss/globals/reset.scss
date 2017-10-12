@@ -26,19 +26,23 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	padding: 0;
 	vertical-align: baseline;
 }
+
 html {
 	overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
 	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
 	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
+
 *,
 *:before,
 *:after {
 	box-sizing: border-box;
 }
+
 body {
 	background: #fff;
 }
+
 article,
 aside,
 details,
@@ -51,31 +55,39 @@ nav,
 section {
 	display: block;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 table { /* tables still need 'cellspacing="0"' in the markup */
 	border-collapse: separate;
 	border-spacing: 0;
 }
+
 caption, th, td {
 	font-weight: normal;
 	text-align: left;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: "";
 }
+
 blockquote, q {
 	quotes: "" "";
 }
+
 a:focus {
 	outline: thin dotted;
 }
+
 a:hover,
 a:active {
 	outline: 0;
 }
+
 a img {
 	border: 0;
 }

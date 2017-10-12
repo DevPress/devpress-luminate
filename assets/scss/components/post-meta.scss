@@ -15,25 +15,32 @@
 	-moz-osx-font-smoothing: grayscale;
 	margin-right: 10px;
 }
+
 .category-meta:before {
 	content: "\f07c";
 }
+
 .tag-meta:before {
 	content: "\f02c";
 }
+
 .edit-meta:before {
 	content: "\f040";
 }
+
 .entry-footer-meta .meta-group {
 	margin-right:20px;
 }
+
 .entry-footer-meta .meta-group:last-of-type {
 	margin-right: 0;
 }
+
 .page-links {
 	clear: both;
 	margin: 0 0 20px;
 }
+
 .more-link {
 	display: block;
 	margin-top: 20px;

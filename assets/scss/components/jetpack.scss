@@ -2,8 +2,9 @@
 --------------------------------------------------------------*/
 
 #infinite-handle {
-	clear:both;
+	clear: both;
 }
+
 #infinite-handle span {
 	background: #fff;
 	font-size: 15px;
@@ -16,21 +17,26 @@
 	display: block;
 	text-align: center;
 }
+
 #infinite-handle span:hover {
 	text-decoration: underline;
 }
+
 #infinite-handle button {
 	box-shadow: none;
 }
+
 .infinite-loader {
 	position: absolute;
 	left: 50%;
 	bottom: 30px;
 }
+
 /* Globally hide elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .posts-navigation {
 	display: none;
 }
+
 .entry-content .sharedaddy {
-	padding-top:30px;
+	padding-top: 30px;
 }

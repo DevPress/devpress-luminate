@@ -7,55 +7,62 @@
 	color: #ddd;
 	font-size: 15px;
 }
+
 .footer-widgets .widget-title {
 	color:#eee;
 	font-size: 18px;
-	padding-bottom:10px;
+	padding-bottom: 10px;
 	margin-bottom: 30px;
 	border-bottom: 2px solid #666;
 }
+
 #colophon {
 	font-size: $secondary-font-size;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	background: #353535;
 	color: #aaa;
-}
-#colophon a {
-	color: #ddd;
+
+	a {
+		color: #ddd;
+	}
 }
 
 @media screen and (min-width:510px) and (max-width:880px) {
 
 	.footer-widgets.columns-2 .widget,
 	.footer-widgets.columns-3 .widget {
-		width:45%;
-		margin-right:10%;
-		float:left;
+		width: 45%;
+		margin-right: 10%;
+		float: left;
 	}
+
 	.footer-widgets.columns-2 .widget:nth-of-type(2n),
 	.footer-widgets.columns-3 .widget:nth-of-type(2n) {
-		margin-right:0;
+		margin-right: 0;
 	}
 
 }
 
 @media screen and (min-width:881px) {
 	.footer-widgets.columns-2 .widget {
-		width:45%;
-		margin-right:10%;
-		float:left;
+		width: 45%;
+		margin-right: 10%;
+		float: left;
 	}
+
 	.footer-widgets.columns-2 .widget:nth-of-type(2n) {
-		margin-right:0;
+		margin-right: 0;
 	}
+
 	.footer-widgets.columns-3 .widget {
-		width:30%;
-		margin-right:5%;
-		float:left;
+		width: 30%;
+		margin-right: 5%;
+		float: left;
 	}
+
 	.footer-widgets.columns-3 .widget:nth-of-type(3n) {
-		margin-right:0;
+		margin-right: 0;
 	}
 
 }

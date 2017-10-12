@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 	// load all tasks
 	require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
-    grunt.initConfig({
+	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
 			files: ['assets/scss/**/*.scss', 'assets/js/**/*.js'],
@@ -15,16 +15,17 @@ module.exports = function(grunt) {
 		},
 		sass: {
 			default: {
-		  		options : {
-			  		style : 'expanded'
-			  	},
-			  	files: {
+				options : {
+					style : 'expanded',
+					sourceMap: true
+				},
+				files: {
 					'css/style.css':'assets/scss/style.scss',
 					'css/page-showcase.css':'assets/scss/templates/page-showcase.scss'
 				}
 			}
 		},
-	    postcss: {
+		postcss: {
 			options: {
 			map: true,
 			processors: [
@@ -40,61 +41,61 @@ module.exports = function(grunt) {
 			options: {
 				aggressiveMerging : false
 			},
-		    target: {
-		        files: [{
-		            expand: true,
-		            cwd: 'css',
+			target: {
+				files: [{
+					expand: true,
+					cwd: 'css',
 					src: ['*.css', '!*.min.css'],
 					dest: 'css',
 					ext: '.min.css'
-		        }]
-		    }
+				}]
+			}
 		},
 		concat: {
-		    default: {
-		        src: [
-		            'assets/js/skip-link-focus-fix.js',
-		            'assets/js/sidr.js',
-		            'assets/js/theme.js'
-		        ],
-		        dest: 'js/luminate.min.js'
-		    }
+			default: {
+				src: [
+					'assets/js/skip-link-focus-fix.js',
+					'assets/js/sidr.js',
+					'assets/js/theme.js'
+				],
+				dest: 'js/luminate.min.js'
+			}
 		},
 		uglify: {
 			options: {
 				mangle: {
 					except: ['jQuery', 'sidr']
-      			},
+				},
 				drop_console: true
 			},
-		    default: {
-			    files: {
-				    'js/luminate.min.js' : 'js/luminate.min.js',
-				    'js/jquery.fitvids.min.js' : 'assets/js/jquery.fitvids.js'
+			default: {
+				files: {
+					'js/luminate.min.js' : 'js/luminate.min.js',
+					'js/jquery.fitvids.min.js' : 'assets/js/jquery.fitvids.js'
 				}
-		    }
+			}
 		},
-	    // https://www.npmjs.org/package/grunt-wp-i18n
-	    makepot: {
-	        target: {
-	            options: {
-	                domainPath: '/languages/',
-	                potFilename: 'luminate.pot',
-	                potHeaders: {
-	                poedit: true, // Includes common Poedit headers.
-                    'x-poedit-keywordslist': true // Include a list of all possible gettext functions.
-                },
-		        type: 'wp-theme',
-		        updateTimestamp: false,
-		        processPot: function( pot, options ) {
-					pot.headers['report-msgid-bugs-to'] = 'https://devpress.com/';
-		        	pot.headers['language'] = 'en_US';
-		        	return pot;
+		// https://www.npmjs.org/package/grunt-wp-i18n
+		makepot: {
+			target: {
+				options: {
+					domainPath: '/languages/',
+					potFilename: 'luminate.pot',
+					potHeaders: {
+						poedit: true, // Includes common Poedit headers.
+						'x-poedit-keywordslist': true // Include a list of all possible gettext functions.
+					},
+					type: 'wp-theme',
+					updateTimestamp: false,
+					processPot: function( pot, options ) {
+						pot.headers['report-msgid-bugs-to'] = 'https://devpress.com/';
+						pot.headers['language'] = 'en_US';
+						return pot;
 					}
 				}
 			}
 		},
-	    replace: {
+		replace: {
 			styleVersion: {
 				src: [
 					'assets/scss/style.scss',
@@ -140,16 +141,16 @@ module.exports = function(grunt) {
 		'sass',
 		'postcss',
 		'cssmin',
-    	'concat',
+		'concat',
 		'uglify'
-    ]);
+	]);
 
-    grunt.registerTask( 'release', [
-    	'replace',
-    	'sass',
-    	'postcss',
-    	'cssmin',
-    	'concat',
+	grunt.registerTask( 'release', [
+		'replace',
+		'sass',
+		'postcss',
+		'cssmin',
+		'concat',
 		'uglify',
 		'makepot',
 		'cssjanus'

@@ -6,63 +6,80 @@ Description: This file is only enqueued for page-showcase.php
 @import "../variables";
 
 .page-template-page-showcase {
+
 	.hentry {
 		padding-top: 6%;
 	}
+
 	.entry-header {
 		padding: 2% 6% 0;
 		width: 100%;
 	}
+
 	.entry-content {
 		padding: 0 6% 2%;
 		width: 100%;
 	}
+
 	.entry-image-link:hover img {
 		opacity: .8;
 	}
+
 	.fallback-thumbnail {
 		background: $highlight-color;
 	}
+
 	.read-more {
 		padding: 0 6% 6%;
 		text-transform: uppercase;
 		font-size: 14px;
 	}
+
 }
 
 @media screen and (min-width:480px) {
+
 	.page-template-page-showcase {
+
 		.hentry {
 			padding-top: 0;
 		}
+
 		.entry-image {
 			margin: 0 0 4%;
 		}
+
 	}
 }
 
 @media screen and (min-width:740px) {
 	.page-template-page-showcase {
+
 		.hentry:not(.featured-1) .entry-title {
 			font-size: 24px;
 			margin-bottom: .5em;
 		}
+
 		.entry-content {
 			min-height: 60px;
 			font-size: 15px;
 		}
+
 		.featured-1 .entry-content {
 			font-size: 17px;
 		}
+
 		.read-more {
 			font-size: 14px;
 		}
+
 		.hentry:not(.featured-1) .read-more {
 			margin: 0;
 			padding: 0;
 			text-transform: uppercase;
 			display: block;
 		}
+
 		.hentry:not(.featured-1) .read-more a {
 			display: block;
 			text-align: center;
@@ -70,9 +87,11 @@ Description: This file is only enqueued for page-showcase.php
 			padding: 14px 10px;
 			text-decoration: none;
 		}
+
 		.hentry:not(.featured-1) .read-more a:hover {
 			background: #f9f9f9;
 		}
+
 	}
 }
 
@@ -83,8 +102,9 @@ Description: This file is only enqueued for page-showcase.php
 
 		.hentry:not(.featured-1) {
 			float: left;
-			max-width: calc( 50% - 15px );
+			max-width: calc(50% - 15px);
 		}
+
 		.featured-2,
 		.featured-4,
 		.featured-6 {
@@ -100,32 +120,38 @@ Description: This file is only enqueued for page-showcase.php
 			.entry-image {
 				margin: 0;
 				float: left;
-				max-width: calc( 66.6% - 10px );
+				max-width: calc(66.6% - 10px);
 			}
+
 			.entry-header {
-				max-width: calc( 33.3% - 20px );
+				max-width: calc(33.3% - 20px);
 				float: left;
 				padding: 4% 4% 2%;
 			}
+
 			.entry-content {
-				max-width: calc( 33.3% - 20px );
+				max-width: calc(33.3% - 20px);
 				float: left;
-				padding: 0 4% 0;
+				padding: 0 4%;
 			}
+
 			.read-more {
 				display: inline-block;
 				padding: 0 4% 2%;
 				text-transform: uppercase;
 			}
 		}
+
 		.hentry:not(.featured-1) .entry-title {
 			text-align: center;
 		}
+
 		.hentry:not(.featured-1) {
 			width: calc( 33.3% - 20px );
 			float: left;
 			font-size: 16px;
 		}
+
 		.featured-2,
 		.featured-3,
 		.featured-5,
@@ -134,6 +160,7 @@ Description: This file is only enqueued for page-showcase.php
 		}
 	}
 }
+
 .admin-msg {
 	text-align: center;
 	padding: 60px 0;

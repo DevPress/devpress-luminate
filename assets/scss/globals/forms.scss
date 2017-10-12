@@ -6,6 +6,7 @@ label {
 	cursor: pointer;
 	display: block;
 }
+
 button,
 input,
 select,
@@ -14,13 +15,14 @@ textarea {
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
 }
+
 button,
 .button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border-style: solid;
-	border-width: 0px;
+	border-width: 0;
 	cursor: pointer;
 	margin: 0 0 10px;
 	position: relative;
@@ -36,6 +38,7 @@ input[type="submit"] {
 	font-size:15px;
 	text-decoration: none;
 }
+
 button:hover,
 .button:hover,
 input[type="button"]:hover,
@@ -43,6 +46,7 @@ input[type="reset"]:hover,
 input[type="submit"]:hover {
 	background: darken( $highlight-color, 10% );
 }
+
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
@@ -55,15 +59,18 @@ input[type="submit"]:active {
 	padding: 8px 20px;
 	outline: none;
 }
+
 input[type="checkbox"],
 input[type="radio"] {
 	padding: 0; /* Addresses excess padding in IE8/9 */
 }
+
 button::-moz-focus-inner,
 input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 */
 	border: 0;
 	padding: 0;
 }
+
 input[type="text"],
 input[type="password"],
 input[type="date"],
@@ -84,6 +91,7 @@ textarea {
 	width: 100%;
 	border-radius: 3px;
 }
+
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="date"]:focus,
@@ -95,13 +103,16 @@ textarea:focus {
 	outline: none;
 	box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.2);
 }
+
 input[type="search"]::-webkit-search-decoration {
 	/* Corrects inner padding displayed oddly in S5, Chrome on OSX */
 	-webkit-appearance: none;
 }
+
 input[name="post_password"] {
-	margin-top:.5em;
+	margin-top: .5em;
 }
+
 textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
 	vertical-align: top; /* Improves readability and alignment in all browsers */

@@ -5,16 +5,19 @@
 .site-main .paging-navigation,
 .site-main .post-navigation,
 .site-main .posts-navigation {
-	clear:both;
+	clear: both;
 	overflow: hidden;
 	font-size: 15px;
 }
+
 .site-main .comment-navigation {
-	padding: 0 6% 0;
+	padding: 0 6%;
 }
+
 .site-main #comment-nav-below {
 	padding: 4% 6% 0;
 }
+
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous,
 .post-navigation .nav-previous,
@@ -22,12 +25,14 @@
 	float: left;
 	width: 50%;
 }
+
 .nav-previous a:before {
 	content: '\2190';
 	display: inline-block;
 	margin-right: 5px;
 	font-weight: 600;
 }
+
 .comment-navigation .nav-next,
 .paging-navigation .nav-next,
 .post-navigation .nav-next,
@@ -36,18 +41,21 @@
 	text-align: right;
 	width: 50%;
 }
+
 .nav-next a:after {
 	content: '\2192';
 	display: inline-block;
 	margin-left: 5px;
 	font-weight: 600;
 }
+
 .paging-navigation a {
-	padding:15px 30px;
+	padding: 15px 30px;
 	display: inline-block;
 }
+
 .posts-navigation,
 .post-navigation {
-	padding:15px 6%;
+	padding: 15px 6%;
 	border-top: 1px solid #f0f0f0;
 }
