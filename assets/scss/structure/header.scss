@@ -43,16 +43,17 @@
 	margin: 0;
 	font-family: $secondary-font;
 	margin-top: 10px;
-}
 
-.site-title a {
-	position: relative;
-	color: #444;
-	text-decoration: none;
+	a {
+		position: relative;
+		color: #444;
+		text-decoration: none;
 
-	&:hover {
-		color: #aaa;
+		&:hover {
+			color: #aaa;
+		}
 	}
+
 }
 
 .site-description {

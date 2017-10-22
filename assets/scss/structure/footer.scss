@@ -9,7 +9,7 @@
 }
 
 .footer-widgets .widget-title {
-	color:#eee;
+	color: #eee;
 	font-size: 18px;
 	padding-bottom: 10px;
 	margin-bottom: 30px;
@@ -68,9 +68,11 @@
 }
 
 @media screen and (max-width:510px) {
+
 	.footer-widgets .widget {
-		margin-bottom:15px;
+		margin-bottom: 15px;
 	}
+
 	.footer-widgets .col-width,
 	#colophon .col-width {
 		padding-right: 6%;
@@ -79,10 +81,12 @@
 }
 
 @media screen and ( min-width: 680px ) {
+
 	.site-info {
 		float: left;
 		max-width: 45%;
 	}
+
 	#footer-navigation {
 		float: right;
 		max-width: 45%;
@@ -90,4 +94,5 @@
 		margin-left: auto;
 		margin-right: -12px;
 	}
+
 }

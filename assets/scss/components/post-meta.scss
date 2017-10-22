@@ -1,9 +1,9 @@
 /* Post Meta
 --------------------------------------------------------------*/
 
-.category-meta:before,
-.tag-meta:before,
-.edit-meta:before {
+.category-meta::before,
+.tag-meta::before,
+.edit-meta::before {
 	font-family: 'luminate-icons';
 	speak: none;
 	font-style: normal;
@@ -16,24 +16,24 @@
 	margin-right: 10px;
 }
 
-.category-meta:before {
+.category-meta::before {
 	content: "\f07c";
 }
 
-.tag-meta:before {
+.tag-meta::before {
 	content: "\f02c";
 }
 
-.edit-meta:before {
+.edit-meta::before {
 	content: "\f040";
 }
 
 .entry-footer-meta .meta-group {
 	margin-right:20px;
-}
 
-.entry-footer-meta .meta-group:last-of-type {
-	margin-right: 0;
+	&:last-of-type {
+		margin-right: 0;
+	}
 }
 
 .page-links {

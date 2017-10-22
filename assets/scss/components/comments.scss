@@ -21,9 +21,6 @@
 	word-wrap: break-word;
 }
 
-.bypostauthor {
-}
-
 .comment-list {
 	margin: 0;
 	padding: 4% 6%;
@@ -40,27 +37,29 @@
 	margin: 0 0 15px;
 }
 
-.comment, .trackback, .pingback {
+.comment,
+.trackback,
+.pingback {
 	position: relative;
 	padding:0 0 0 80px;
 }
 
 .comment-body {
-	margin:0 0 20px 0;
+	margin: 0 0 20px 0;
 }
 
 .comment-author {
 	font-family: $secondary-font;
 	display: block;
 	font-size: 18px;
-	margin-bottom:10px;
-}
+	margin-bottom: 10px;
 
-.comment-author .avatar {
-	position: absolute;
-	top: 0;
-	left: 0;
-	border-radius: 100%;
+	.avatar {
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 100%;
+	}
 }
 
 .trackback .avatar,
@@ -92,29 +91,29 @@
 
 .comment-metadata {
 	text-transform: uppercase;
-	font-size:12px;
-	margin-bottom:30px;
+	font-size: 12px;
+	margin-bottom: 30px;
 }
 
 .comment-reply {
 	display: inline-block;
-	margin-right:5px;
+	margin-right: 5px;
 }
 
 .comment-reply-link:before {
 	display: inline-block;
 	font-family: 'luminate-icons';
 	content: '\f112';
-	margin-right:5px;
+	margin-right: 5px;
 }
 
 .comment-time {
 	display: inline-block;
-	margin-right:10px;
+	margin-right: 10px;
 }
 
 .comment-time a {
-	color:#666;
+	color: #666;
 }
 
 .comment-list .children {
@@ -132,47 +131,47 @@
 }
 
 #respond {
-	padding:4% 6%;
+	padding: 4% 6%;
+
+	p {
+		margin-bottom: 20px;
+	}
+
+	label {
+		margin-bottom: 2px;
+	}
+
+	textarea {
+		display: block;
+		width: 100%;
+	}
+
+	.placeholder {
+		color: #aaa;
+	}
+
+	/* These are not displayed by default */
+	.form-allowed-tags {
+		display: none;
+		clear: both;
+		width: 80%;
+		margin-bottom: 15px;
+
+		code {
+			font-size: 12px;
+		}
+	}
+
 }
 
 .comment-list #respond {
-	padding:4% 0;
+	padding: 4% 0;
 }
 
-#respond p {
-	margin-bottom: 20px;
-}
-
-#respond label {
-	margin-bottom: 2px;
-}
-
-#author, #email, #url {
+#author,
+#email,
+#url {
 	width: 100%;
-}
-
-#respond textarea {
-	display: block;
-	width:100%;
-}
-
-#respond .placeholder {
-	color: #aaa;
-}
-
-/* These are not displayed by default */
-#respond .form-allowed-tags {
-	display: none;
-	clear: both;
-	width: 80%;
-}
-
-#respond .form-allowed-tags {
-	margin-bottom: 15px;
-}
-
-#respond .form-allowed-tags code {
-	font-size: 12px;
 }
 
 #cancel-comment-reply-link {
@@ -182,7 +181,9 @@
 
 @media screen and (min-width:510px) {
 
-	#author, #email, #url {
+	#author,
+	#email,
+	#url {
 		width: 50%;
 	}
 

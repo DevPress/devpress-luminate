@@ -92,7 +92,7 @@ Description: This file is only enqueued for page-showcase.php
   .layout-single-column.page-template-page-showcase .hentry:not(.featured-1) .entry-title {
     text-align: center; }
   .layout-single-column.page-template-page-showcase .hentry:not(.featured-1) {
-    width: calc( 33.3% - 20px);
+    width: calc(33.3% - 20px);
     float: left;
     font-size: 16px; }
   .layout-single-column.page-template-page-showcase .featured-2,

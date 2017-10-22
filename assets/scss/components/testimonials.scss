@@ -3,15 +3,16 @@
 
 .jetpack-testimonial {
 	padding: 6%;
+
+	img {
+		border-radius: 50%;
+	}
+
 }
 
 .testimonial-avatar {
 	margin-right: 30px;
 	margin-bottom: 15px;
-}
-
-.testimonial-avatar img {
-	border-radius: 50%;
 }
 
 .testimonial-cite {

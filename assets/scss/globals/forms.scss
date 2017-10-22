@@ -29,35 +29,24 @@ input[type="submit"] {
 	text-decoration: none;
 	text-align: center;
 	-webkit-appearance: none;
-	border-radius:3px;
+	border-radius: 3px;
 	display: inline-block;
 	padding: 7px 20px 9px;
 	background-color: $highlight-color;
 	box-shadow: inset 0 -2px rgba(0,0,0,.2);
 	color: #fff;
-	font-size:15px;
-	text-decoration: none;
-}
+	font-size: 15px;
 
-button:hover,
-.button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-	background: darken( $highlight-color, 10% );
-}
+	&:hover {
+		background: darken( $highlight-color, 10% );
+	}
 
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-	box-shadow: inset 0 2px rgba(0,0,0,.15);
-	padding: 8px 20px;
-	outline: none;
+	&:focus,
+	&:active {
+		box-shadow: inset 0 2px rgba(0,0,0,.15);
+		padding: 8px 20px;
+		outline: none;
+	}
 }
 
 input[type="checkbox"],
@@ -67,7 +56,7 @@ input[type="radio"] {
 
 button::-moz-focus-inner,
 input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 */
-	border: 0;
+	border: none;
 	padding: 0;
 }
 
@@ -81,27 +70,22 @@ textarea {
 	-webkit-appearance: none;
 	background-color: #fafafa;
 	font-family: inherit;
-	border:none;
+	border: none;
 	box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.025), inset 0 1px 1px rgba(0, 0, 0, 0.2);
 	color: rgba(0, 0, 0, 0.75);
 	display: block;
 	font-size: 15px;
-	margin: 0 0 1em 0;
+	margin: 0 0 1em;
 	padding: 8px;
 	width: 100%;
 	border-radius: 3px;
-}
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="date"]:focus,
-input[type="email"]:focus,
-input[type="search"]:focus,
-input[type="url"]:focus,
-textarea:focus {
-	background-color: #fff;
-	outline: none;
-	box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.2);
+	&:focus {
+		background-color: #fff;
+		outline: none;
+		box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.2);
+	}
+
 }
 
 input[type="search"]::-webkit-search-decoration {

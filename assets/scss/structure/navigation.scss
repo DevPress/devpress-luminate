@@ -27,10 +27,10 @@
 		display: block;
 		text-decoration: none;
 		color: #555;
-	}
 
-	a:hover {
-		color: #aaa;
+		&:hover {
+			color: #aaa;
+		}
 	}
 
 }
@@ -62,7 +62,7 @@
 		.menu-item-has-children > a:after {
 			font-family: 'luminate-icons';
 			color: #aaa;
-			font-size:14px;
+			font-size: 14px;
 			line-height: 1;
 			content: '\f0d7';
 			position: absolute;
@@ -146,11 +146,6 @@
 		.toggle:before,
 		.toggle:after {
 			transition: all 100ms ease-in-out;
-		}
-
-		.toggle,
-		.toggle:before,
-		.toggle:after {
 			cursor: pointer;
 			border-radius: 2px;
 			height: 3px;
@@ -184,18 +179,17 @@
 
 	.toggle {
 		background-color: rgba(0, 0, 0, 0);
-	}
 
-	.toggle:before {
-		-webkit-transform: rotate(45deg);
-		transform: rotate(45deg);
-		top: 0;
-	}
+		&::before {
+			transform: rotate(45deg);
+			top: 0;
+		}
 
-	.toggle:after {
-		-webkit-transform: translateY(-10px) rotate(-45deg);
-		transform: translateY(-10px) rotate(-45deg);
-		top: 10px;
+		&::after {
+			transform: translateY(-10px) rotate(-45deg);
+			top: 10px;
+		}
+
 	}
 
 }
@@ -272,10 +266,11 @@
 		color: #ddd;
 		padding: 12px;
 		text-decoration: none;
-	}
 
-	a:hover {
-		color: #fff;
+		&:hover {
+			color: #fff;
+		}
+
 	}
 
 	.top-navigation-text {

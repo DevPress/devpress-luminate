@@ -26,7 +26,7 @@ If you have Grunt installed, just run `npm install` in the theme directory to do
 Development
 ---
 
-* Update: Linting for sass files
+* Update: Improved .scss organization and linting
 
 1.2.0 (05/12/2016)
 ---

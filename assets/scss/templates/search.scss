@@ -1,20 +1,24 @@
 /* Search
 --------------------------------------------------------------*/
 
-.search-form label {
-	width: 100%;
-	padding-right: 59px;
-	float: left;
-}
+.search-form {
 
-.search-form input,
-.search-form button {
-	margin: 0;
-}
+	label {
+		width: 100%;
+		padding-right: 59px;
+		float: left;
+	}
 
-.search-form .search-submit {
-	width: 54px;
-	margin-left: -54px;
-	float: left;
-	height: 38px;
+	input,
+	button {
+		margin: 0;
+	}
+
+	.search-submit {
+		width: 54px;
+		margin-left: -54px;
+		float: left;
+		height: 38px;
+	}
+
 }

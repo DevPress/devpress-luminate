@@ -98,8 +98,8 @@ function luminate_customize_controls( $wp_customize ) {
 			'section'  => 'page-showcase',
 			'type'     => 'text',
 			'input_attrs' => array(
-		        'placeholder'    => __( 'Read More', 'luminate' ),
-		    )
+				'placeholder'    => __( 'Read More', 'luminate' ),
+			)
 		) );
 
 	endfor;
@@ -201,6 +201,7 @@ function luminate_sanitize_textarea( $content ) {
 	if ( '' === $content ) {
 		return '';
 	}
+
 	return wp_kses( $content, wp_kses_allowed_html( 'post' ) );
 
 }

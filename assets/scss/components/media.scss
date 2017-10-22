@@ -48,13 +48,14 @@ object {
 	text-align: center;
 	vertical-align: top;
 	width: 100%;
-}
 
-.gallery-item img {
-	width:100%;
-	display: block;
-	padding-right: 5%;
-	padding-bottom: 5%;
+	img {
+		width: 100%;
+		display: block;
+		padding-right: 5%;
+		padding-bottom: 5%;
+	}
+
 }
 
 .gallery-columns-1 .gallery-item img {
@@ -93,5 +94,3 @@ object {
 .gallery-columns-9 .gallery-item {
 	max-width: 11.11%;
 }
-
-.gallery-caption {}

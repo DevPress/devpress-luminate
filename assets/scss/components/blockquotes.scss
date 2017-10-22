@@ -1,26 +1,30 @@
 /* Blockquotes
 --------------------------------------------------------------*/
 
-#content blockquote {
-	background: #f6f6f6;
-	margin: 0 0 20px;
-	padding: 20px;
-	border-left: 4px solid $highlight-color;
-}
+#content {
 
-#content blockquote cite {
-	display: inline-block;
-	margin-top: .5em;
-	font-size: 16px;
-}
+	blockquote {
+		background: #f6f6f6;
+		margin: 0 0 20px;
+		padding: 20px;
+		border-left: 4px solid $highlight-color;
 
-#content blockquote cite:before {
-	content: '\2014';
-	margin-right: .5em;
-}
+		cite {
+			display: inline-block;
+			margin-top: .5em;
+			font-size: 16px;
 
-#content blockquote p:last-of-type {
-	margin-bottom: 0;
+			&::before {
+				content: '\2014';
+				margin-right: .5em;
+			}
+		}
+
+		p:last-of-type {
+			margin-bottom: 0;
+		}
+
+	}
 }
 
 .single #content blockquote {
