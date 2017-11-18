@@ -55,7 +55,7 @@ module.exports = function(grunt) {
 			default: {
 				src: [
 					'assets/js/skip-link-focus-fix.js',
-					'assets/js/sidr.js',
+					'assets/js/jquery.sidr.js',
 					'assets/js/theme.js'
 				],
 				dest: 'js/luminate.min.js'

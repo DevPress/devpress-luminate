@@ -27,6 +27,7 @@ Development
 ---
 
 * Update: Improved .scss organization and linting
+* Update: Update Sidr library to v2.2.1
 
 1.2.0 (05/12/2016)
 ---
