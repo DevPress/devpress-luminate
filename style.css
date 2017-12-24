@@ -15,17 +15,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 */
 
-/*
+/* To Modify:
+--------------------------------------------------------------
 
 This theme uses Grunt tasks to build and minify the styles.
 
-If WP_DEBUG is set to TRUE, css/style.css is loaded (for development).
-IF WP_DEBUG is set to FALSE, css/style.css.min is loaded (for production).
+If you wish to modify styles, there are a number of options:
 
-If you wish to add styles, there are a number of options:
-
-1. Use the JetPack CSS module and override styles inline.
+1. Use the CSS module under "Appearance > CSS" in your WordPress dashboard.
 2. Create a child theme and add styles to the style.css of your child theme.
-3. Edit styles in sass folder directly and use Grunt build tasks.
+3. Edit styles in assets/scss folder directly and use Grunt build tasks.
 
 */
