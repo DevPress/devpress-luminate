@@ -70,46 +70,46 @@ endif;
  */
 function luminate_social_nav_class( $classes, $item ) {
 
-    if ( 0 == $item->parent && 'custom' == $item->type) {
+	if ( 0 == $item->parent && 'custom' == $item->type) {
 
-    	$url = parse_url( $item->url );
+		$url = parse_url( $item->url );
 
-    	if ( !isset( $url['host'] ) ) {
-	    	return $classes;
-    	}
+		if ( !isset( $url['host'] ) ) {
+			return $classes;
+		}
 
-    	$base = str_replace( "www.", "", $url['host'] );
+		$base = str_replace( "www.", "", $url['host'] );
 
-    	$social = array(
-    		'behance.com',
-    		'dribbble.com',
-    		'facebook.com',
-    		'flickr.com',
-    		'github.com',
-    		'linkedin.com',
-    		'pinterest.com',
-    		'plus.google.com',
-    		'instagr.am',
-    		'instagram.com',
-    		'skype.com',
-    		'spotify.com',
-    		'twitter.com',
-    		'vimeo.com'
-    	);
-    	$social = apply_filters( 'luminate_social_links', $social );
+		$social = array(
+			'behance.com',
+			'dribbble.com',
+			'facebook.com',
+			'flickr.com',
+			'github.com',
+			'linkedin.com',
+			'pinterest.com',
+			'plus.google.com',
+			'instagr.am',
+			'instagram.com',
+			'skype.com',
+			'spotify.com',
+			'twitter.com',
+			'vimeo.com'
+		);
+		$social = apply_filters( 'luminate_social_links', $social );
 
-    	// Tumblr needs special attention
-    	if ( strpos( $base, 'tumblr' ) ) {
+		// Tumblr needs special attention
+		if ( strpos( $base, 'tumblr' ) ) {
 			$classes[] = 'social';
 		}
 
-    	if ( in_array( $base, $social ) ) {
-	    	$classes[] = 'social';
-    	}
+		if ( in_array( $base, $social ) ) {
+			$classes[] = 'social';
+		}
 
-    }
+	}
 
-    return $classes;
+	return $classes;
 
 }
 add_filter( 'nav_menu_css_class', 'luminate_social_nav_class', 10, 2 );

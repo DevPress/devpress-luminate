@@ -117,11 +117,11 @@ function luminate_template_content_width() {
 
 	$layout = get_theme_mod( 'theme_layout', 'sidebar-right' );
 
-	if ( 'single-column' ==  $layout ) {
+	if ( 'single-column' ===  $layout ) {
 		$GLOBALS['content_width'] = apply_filters( 'luminate_content_width_single_column', 950 );
 	}
 
-	if ( 'narrow-column' == $layout ) {
+	if ( 'narrow-column' === $layout ) {
 		$GLOBALS['content_width'] = apply_filters( 'luminate_content_width_narrow_column', 695 );
 	}
 
@@ -188,28 +188,28 @@ function luminate_body_fonts() {
 	// Google font URL to load
 	$font_url = '';
 
-    /* Translators: If there are characters in your language that are not
-    * supported by Lora, translate this to 'off'. Do not translate
-    * into your own language.
-    */
-    $primary = _x( 'active', 'Roboto font: active or inactive', 'luminate' );
+	/* Translators: If there are characters in your language that are not
+	* supported by Roboto, translate this to 'off'. Do not translate
+	* into your own language.
+	*/
+	$primary = _x( 'active', 'Roboto font: active or inactive', 'luminate' );
 
-    if ( 'inactive' !== $primary || 'inactive' !== $secondary ) :
+	if ( 'inactive' !== $primary ) :
 
-        $font_families = array();
+		$font_families = array();
 
-        if ( 'inactive' !== $primary ) {
-            $font_families[] = 'Roboto:400italic,700italic,700,400';
-        }
+		if ( 'inactive' !== $primary ) {
+			$font_families[] = 'Roboto:400italic,700italic,700,400';
+		}
 
-        $query_args = array(
-            'family' => urlencode( implode( '|', $font_families ) ),
-            'subset' => urlencode( 'latin,latin-ext' ),
-        );
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
 
-        $font_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+		$font_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 
-    endif;
+	endif;
 
 	// Load Google Fonts
 	wp_enqueue_style( 'luminate-body-fonts', $font_url, array(), null, 'screen' );
@@ -225,7 +225,12 @@ if ( ! function_exists( 'luminate_icon_fonts' ) ) :
 function luminate_icon_fonts() {
 
 	// Icon Font
-	wp_enqueue_style( 'luminate-icons', get_template_directory_uri() . '/assets/fonts/luminate-icons.css', array(), '1.0.0' );
+	wp_enqueue_style(
+		'luminate-icons',
+		get_template_directory_uri() . '/assets/fonts/luminate-icons.css',
+		array(),
+		'1.0.0'
+	);
 
 }
 add_action( 'wp_enqueue_scripts', 'luminate_icon_fonts' );
